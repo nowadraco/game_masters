@@ -20,46 +20,144 @@
 </div>
 
 <script>
-    // Caminho configurado para a pasta latest
-    fetch('pokemon_stats_forms.json')
-        .then(response => response.json())
-        .then(data => {
-            const container = document.getElementById('pokemonList');
-            container.innerHTML = '';
+    let allData = [];
+    let imageMap = {};
+    let currentIndex = 0;
+    const itemsPerLoad = 10;
+    const container = document.getElementById('pokemonList');
 
-            data.forEach(p => {
-                const evolucoes = p.evolutions.length > 0 ? p.evolutions.map(evo => `
-                    <div class="evo-item">
-                        ➔ ${evo.evolution.replace('POKEMON_ID_', '')} 
-                        <span class="badge bg-dark">${evo.candyCost || 0} Doces</span>
+    Promise.all([
+        fetch('https://cdn.jsdelivr.net/gh/nowadraco/blogger-poke-dragon-shadow@main/json/imagens_pokemon.json').then(res => res.json()),
+        fetch('pokemon_stats_forms.json').then(res => res.json())
+    ]).then(([images, pokemon]) => {
+        images.forEach(img => {
+            imageMap[img.nome.toUpperCase()] = img;
+        });
+
+        allData = pokemon;
+        container.innerHTML = '';
+        loadMore();
+    }).catch(err => {
+        console.error("Erro ao carregar dados:", err);
+        container.innerHTML = `<div class="alert alert-danger">Erro ao carregar arquivos JSON. Verifique o console.</div>`;
+    });
+
+    function loadMore() {
+        const nextBatch = allData.slice(currentIndex, currentIndex + itemsPerLoad);
+        
+        nextBatch.forEach(p => {
+            const rawId = p.pokemonId ? p.pokemonId.replace('POKEMON_ID_', '') : 'Desconhecido';
+            const displayForm = p.form ? p.form.replace(rawId + '_', '').replace('_', ' ') : 'Normal';
+            
+            // Busca Imagens
+            const imgData = imageMap[rawId] || null;
+            const imgUrl = imgData ? imgData.imgNormal : 'https://raw.githubusercontent.com/nowadraco/blogger-poke-dragon-shadow/refs/heads/main/img/pokemon/substitute.png';
+            const imgShiny = imgData ? imgData.imgShiny : null;
+
+            // 1. Evoluções e Missões
+            const evolucoes = p.evolutions && p.evolutions.length > 0 ? p.evolutions.map(evo => {
+                if(!evo.evolution) return '';
+                const evoName = evo.evolution.replace('POKEMON_ID_', '');
+                return `
+                    <div class="evo-item" style="font-size: 0.8rem; background: #252525; padding: 5px; border-radius: 5px; margin-top: 5px; border-left: 3px solid #f39c12;">
+                        ➔ ${evoName} <span class="badge bg-dark">${evo.candyCost || 0} Doces</span>
                         ${evo.questRequirement ? `<br><small class="text-warning">Missão: ${evo.questRequirement}</small>` : ''}
-                    </div>
-                `).join('') : '<small class="text-muted">Não evolui</small>';
+                    </div>`;
+            }).join('') : '<small class="text-muted">Não possui evoluções</small>';
 
-                const card = `
-                    <div class="col-md-6 col-lg-4">
-                        <div class="pokemon-card p-3">
-                            <h5 class="text-white">${p.pokemonId.replace('POKEMON_ID_', '')}</h5>
-                            <small class="text-muted d-block mb-2">${p.form}</small>
-                            <span class="badge bg-primary type-badge">${p.types.type1}</span>
-                            ${p.types.type2 ? `<span class="badge bg-secondary type-badge">${p.types.type2}</span>` : ''}
-                            
-                            <div class="row mt-3">
-                                <div class="col-4 text-center small">ATK<br><span class="stat-value">${p.stats?.baseAttack || '?'}</span></div>
-                                <div class="col-4 text-center small">DEF<br><span class="stat-value">${p.stats?.baseDefense || '?'}</span></div>
-                                <div class="col-4 text-center small">STA<br><span class="stat-value">${p.stats?.baseStamina || '?'}</span></div>
-                            </div>
+            // 2. Mega Evoluções (Stats Completos)
+            const megas = p.megaEvolutions && p.megaEvolutions.length > 0 ? p.megaEvolutions.map(m => {
+                const megaSearchName = `MEGA ${rawId}`;
+                const megaImgData = imageMap[megaSearchName] || null;
+                const megaImgUrl = megaImgData ? megaImgData.imgNormal : imgUrl;
 
-                            <div class="section-title">Evoluções</div>
-                            ${evolucoes}
+                return `
+                    <div style="background: rgba(13, 202, 240, 0.1); border: 1px solid #0dcaf0; padding: 8px; border-radius: 8px; margin-top: 10px;">
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <img src="${megaImgUrl}" style="width: 40px; height: 40px; object-fit: contain;">
+                            <strong style="font-size: 0.8rem; color: #0dcaf0;">${megaSearchName}</strong>
+                        </div>
+                        <div class="row text-center g-0" style="font-size: 0.7rem; color: #eee;">
+                            <div class="col-4">ATK: <span class="text-warning">${m.stats?.baseAttack}</span></div>
+                            <div class="col-4">DEF: <span class="text-warning">${m.stats?.baseDefense}</span></div>
+                            <div class="col-4">STA: <span class="text-warning">${m.stats?.baseStamina}</span></div>
                         </div>
                     </div>`;
-                container.innerHTML += card;
-            });
-        })
-        .catch(error => {
-            document.getElementById('pokemonList').innerHTML = '<p class="text-danger">Erro ao carregar o JSON. Certifique-se de que o arquivo pokemon_stats_forms.json existe na mesma pasta.</p>';
+            }).join('') : '';
+
+            // 3. Ataques
+            const quickMoves = p.quickMoves ? p.quickMoves.map(m => `<span class="badge border border-info me-1" style="font-size:0.6rem; color:#0dcaf0;">${m.replace('_FAST', '').replace('_', ' ')}</span>`).join('') : '';
+            const chargedMoves = p.cinematicMoves ? p.cinematicMoves.map(m => `<span class="badge border border-danger me-1" style="font-size:0.6rem; color:#ff4d4d;">${m.replace('_', ' ')}</span>`).join('') : '';
+
+            const card = `
+                <div class="col-md-6 col-lg-4">
+                    <div class="pokemon-card p-3 shadow-sm" style="background: #1e1e1e; border: 1px solid #333; border-radius: 12px; margin-bottom: 25px; min-height: 750px; display: flex; flex-direction: column; color: #e0e0e0;">
+                        
+                        <div class="text-center mb-3 d-flex justify-content-center gap-2" style="background: #252525; border-radius: 10px; padding: 10px;">
+                            <div class="text-center">
+                                <img src="${imgUrl}" style="width: 90px; height: 90px; object-fit: contain;">
+                                <div style="font-size: 0.6rem; color: #aaa;">Normal</div>
+                            </div>
+                            ${imgShiny ? `<div class="text-center"><img src="${imgShiny}" style="width: 90px; height: 90px; object-fit: contain;"><div style="font-size: 0.6rem; color: #f39c12;">Shiny ✨</div></div>` : ''}
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h5 class="text-white mb-0" style="letter-spacing: 1px;">${rawId}</h5>
+                                <small class="text-muted">${displayForm}</small>
+                            </div>
+                            <div class="text-end">
+                                <span class="badge bg-primary d-block mb-1" style="font-size: 0.65rem;">${p.types.type1.replace('POKEMON_TYPE_', '')}</span>
+                                ${p.types.type2 ? `<span class="badge bg-secondary d-block" style="font-size: 0.65rem;">${p.types.type2.replace('POKEMON_TYPE_', '')}</span>` : ''}
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3 text-center border-top border-bottom border-secondary py-2 bg-dark mx-0 rounded">
+                            <div class="col-4 small text-muted">ATK<br><span class="text-warning fw-bold">${p.stats?.baseAttack}</span></div>
+                            <div class="col-4 small text-muted">DEF<br><span class="text-warning fw-bold">${p.stats?.baseDefense}</span></div>
+                            <div class="col-4 small text-muted">STA<br><span class="text-warning fw-bold">${p.stats?.baseStamina}</span></div>
+                        </div>
+
+                        <div class="mt-2 p-2 rounded" style="background: #252525; font-size: 0.75rem;">
+                            <div class="d-flex justify-content-between">
+                                <span>📏 Altura: <b>${p.sizeSettings?.pokedexHeightM}m</b></span>
+                                <span>⚖️ Peso: <b>${p.sizeSettings?.pokedexWeightKg}kg</b></span>
+                            </div>
+                            <div class="d-flex justify-content-between mt-1">
+                                <span>🎯 Captura: <b>${(p.encounter?.baseCaptureRate * 100).toFixed(1)}%</b></span>
+                                <span>🏃 Fuga: <b>${(p.encounter?.baseFleeRate * 100).toFixed(1)}%</b></span>
+                            </div>
+                            <div class="text-center mt-1 text-info" style="border-top: 1px solid #333; padding-top: 3px;">
+                                Gênero: <b>${p.gender}</b>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <div style="font-size: 0.7rem; font-weight: bold; color: #5dade2; text-transform: uppercase; margin-bottom: 4px;">Rápidos</div>
+                            <div class="mb-2">${quickMoves}</div>
+                            <div style="font-size: 0.7rem; font-weight: bold; color: #e74c3c; text-transform: uppercase; margin-bottom: 4px;">Carregados</div>
+                            <div>${chargedMoves}</div>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div style="font-size: 0.8rem; font-weight: bold; color: #5dade2; border-bottom: 1px solid #333; margin-top: 10px;">Evolução</div>
+                            ${evolucoes}
+                            ${megas}
+                        </div>
+                    </div>
+                </div>`;
+            
+            container.insertAdjacentHTML('beforeend', card);
         });
+
+        currentIndex += itemsPerLoad;
+    }
+
+    window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 600) {
+            if (currentIndex < allData.length) loadMore();
+        }
+    });
 </script>
 </body>
 </html>
