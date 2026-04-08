@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Poke Dragon Shadow - Movimentos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5 bg-white p-4 rounded shadow">
+    <h2 class="mb-4">Tabela Técnica de Movimentos</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Poder</th>
+                <th>Energia</th>
+                <th>Tempo (ms)</th>
+            </tr>
+        </thead>
+        <tbody id="movesTable"></tbody>
+    </table>
+</div>
+
+<script>
+    fetch('combat_moves_animations.json')
+        .then(response => response.json())
+        .then(data => {
+            const tbody = document.getElementById('movesTable');
+            tbody.innerHTML = '';
+            data.forEach(m => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td><strong>${m.movementId.replace('MOVE_', '').replace('_', ' ')}</strong></td>
+                        <td>${m.pokemonType.replace('POKEMON_TYPE_', '')}</td>
+                        <td>${m.power}</td>
+                        <td class="${m.energyCost > 0 ? 'text-success' : 'text-danger'}">${m.energyCost}</td>
+                        <td>${m.durationMs}</td>
+                    </tr>`;
+            });
+        });
+</script>
+</body>
+</html>

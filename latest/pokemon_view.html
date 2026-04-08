@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Poke Dragon Shadow - Database Pokémon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #121212; color: #e0e0e0; }
+        .pokemon-card { background: #1e1e1e; border: 1px solid #333; border-radius: 12px; margin-bottom: 25px; }
+        .type-badge { padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+        .stat-value { font-weight: bold; color: #f39c12; }
+        .section-title { font-size: 0.9rem; font-weight: bold; color: #5dade2; border-bottom: 1px solid #333; margin-top: 15px; padding-bottom: 5px; }
+        .evo-item { font-size: 0.85rem; background: #252525; padding: 5px; border-radius: 5px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Database de Pokémon (Automático)</h1>
+    <div id="pokemonList" class="row">Carregando dados...</div>
+</div>
+
+<script>
+    // Caminho configurado para a pasta latest
+    fetch('pokemon_stats_forms.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('pokemonList');
+            container.innerHTML = '';
+
+            data.forEach(p => {
+                const evolucoes = p.evolutions.length > 0 ? p.evolutions.map(evo => `
+                    <div class="evo-item">
+                        ➔ ${evo.evolution.replace('POKEMON_ID_', '')} 
+                        <span class="badge bg-dark">${evo.candyCost || 0} Doces</span>
+                        ${evo.questRequirement ? `<br><small class="text-warning">Missão: ${evo.questRequirement}</small>` : ''}
+                    </div>
+                `).join('') : '<small class="text-muted">Não evolui</small>';
+
+                const card = `
+                    <div class="col-md-6 col-lg-4">
+                        <div class="pokemon-card p-3">
+                            <h5 class="text-white">${p.pokemonId.replace('POKEMON_ID_', '')}</h5>
+                            <small class="text-muted d-block mb-2">${p.form}</small>
+                            <span class="badge bg-primary type-badge">${p.types.type1}</span>
+                            ${p.types.type2 ? `<span class="badge bg-secondary type-badge">${p.types.type2}</span>` : ''}
+                            
+                            <div class="row mt-3">
+                                <div class="col-4 text-center small">ATK<br><span class="stat-value">${p.stats?.baseAttack || '?'}</span></div>
+                                <div class="col-4 text-center small">DEF<br><span class="stat-value">${p.stats?.baseDefense || '?'}</span></div>
+                                <div class="col-4 text-center small">STA<br><span class="stat-value">${p.stats?.baseStamina || '?'}</span></div>
+                            </div>
+
+                            <div class="section-title">Evoluções</div>
+                            ${evolucoes}
+                        </div>
+                    </div>`;
+                container.innerHTML += card;
+            });
+        })
+        .catch(error => {
+            document.getElementById('pokemonList').innerHTML = '<p class="text-danger">Erro ao carregar o JSON. Certifique-se de que o arquivo pokemon_stats_forms.json existe na mesma pasta.</p>';
+        });
+</script>
+</body>
+</html>
