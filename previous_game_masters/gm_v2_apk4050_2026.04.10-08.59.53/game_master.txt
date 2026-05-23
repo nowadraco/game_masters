@@ -187,12 +187,13 @@ template {
     iap_item_display {
       sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
       sort_order: 1
+      hidden: true
       title: "season_pass_premium_track_title_sustainabilityweek2026"
       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
       sku_enable_time: "2025-04-14T10:00:00"
-      sku_disable_time: "2026-04-22T20:00:00"
+      sku_disable_time: "2025-04-22T20:00:00"
       sku_enable_time_utc_ms: 1744624800000
-      sku_disable_time_utc_ms: 1776888000000
+      sku_disable_time_utc_ms: 1745352000000
       image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
     }
   }
@@ -204,49 +205,14 @@ template {
     iap_item_display {
       sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
       sort_order: 1
+      hidden: true
       title: "season_pass_premium_track_plus_six_ranks_title_sustainabilityweek2026"
       description: "event_pass_plus_points_6_ranks_description"
       sku_enable_time: "2025-04-14T10:00:00"
-      sku_disable_time: "2026-04-22T20:00:00"
+      sku_disable_time: "2025-04-22T20:00:00"
       sku_enable_time_utc_ms: 1744624800000
-      sku_disable_time_utc_ms: 1776888000000
+      sku_disable_time_utc_ms: 1745352000000
       image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
-    }
-  }
-}
-template {
-  template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-  data {
-    template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-    iap_item_display {
-      sku: "pgorelease.april3_2026_deluxe_event_pass_track_unlock"
-      sort_order: 1
-      hidden: true
-      title: "season_pass_premium_track_title_steeled_resolve_2026"
-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-      sku_enable_time: "2025-04-28T10:00:00"
-      sku_disable_time: "2025-05-06T20:00:00"
-      sku_enable_time_utc_ms: 1745834400000
-      sku_disable_time_utc_ms: 1746561600000
-      image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Memory_Lane_Meltan_Celebration_SRR_v1-1024x576.jpg"
-    }
-  }
-}
-template {
-  template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-  data {
-    template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-    iap_item_display {
-      sku: "pgorelease.april3_2026_deluxe_event_pass_track_unlock_plus_points"
-      sort_order: 1
-      hidden: true
-      title: "season_pass_premium_track_plus_six_ranks_title_steeled_resolve_2026"
-      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
-      sku_enable_time: "2025-04-28T10:00:00"
-      sku_disable_time: "2025-05-06T20:00:00"
-      sku_enable_time_utc_ms: 1745834400000
-      sku_disable_time_utc_ms: 1746561600000
-      image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Memory_Lane_Meltan_Celebration_SRR_v1-1024x576.jpg"
     }
   }
 }
@@ -35892,41 +35858,11 @@ template {
   }
 }
 template {
-  template_id: "BADGE_EVENT_0196"
-  data {
-    template_id: "BADGE_EVENT_0196"
-    badge_settings {
-      badge_type: 5907
-      badge_rank: 2
-      targets: 100
-      event_badge: true
-      event_badge_settings {
-        suppress_client_visuals: true
-      }
-    }
-  }
-}
-template {
   template_id: "BADGE_EVENT_0200"
   data {
     template_id: "BADGE_EVENT_0200"
     badge_settings {
       badge_type: 5911
-      badge_rank: 2
-      targets: 100
-      event_badge: true
-      event_badge_settings {
-        suppress_client_visuals: true
-      }
-    }
-  }
-}
-template {
-  template_id: "BADGE_EVENT_0280"
-  data {
-    template_id: "BADGE_EVENT_0280"
-    badge_settings {
-      badge_type: 5991
       badge_rank: 2
       targets: 100
       event_badge: true
@@ -81853,12 +81789,6 @@ template {
         priority_event_type_list: PRIORITY_EVENT_TYPE_DODGE
         priority_event_type_list: PRIORITY_EVENT_TYPE_SWAP_POKEMON
         priority_event_type_list: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-        buffer_blocking_event_type_list: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-        input_block_exception_list {
-          current_action: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-          allowed_buffered_actions: PRIORITY_EVENT_TYPE_DODGE
-          allowed_buffered_actions: PRIORITY_EVENT_TYPE_SWAP_POKEMON
-        }
       }
       bread_input_buffer_priority_list {
         event_priority: DODGE
@@ -81866,19 +81796,11 @@ template {
         priority_event_type_list: PRIORITY_EVENT_TYPE_DODGE
         priority_event_type_list: PRIORITY_EVENT_TYPE_SWAP_POKEMON
         priority_event_type_list: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-        buffer_blocking_event_type_list: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-        buffer_blocking_event_type_list: PRIORITY_EVENT_TYPE_SWAP_POKEMON
-        input_block_exception_list {
-          current_action: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-          allowed_buffered_actions: PRIORITY_EVENT_TYPE_DODGE
-        }
       }
       combat_input_buffer_priority_list {
         event_priority: SWAP_POKEMON
         priority_event_type_list: PRIORITY_EVENT_TYPE_SWAP_POKEMON
         priority_event_type_list: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-        buffer_blocking_event_type_list: PRIORITY_EVENT_TYPE_CHARGE_ATTACK
-        buffer_blocking_event_type_list: PRIORITY_EVENT_TYPE_SWAP_POKEMON
       }
     }
   }
@@ -88884,24 +88806,6 @@ template {
   }
 }
 template {
-  template_id: "EVENT_PASS_APRIL3_EVENT_STORE_REDIRECT"
-  data {
-    template_id: "EVENT_PASS_APRIL3_EVENT_STORE_REDIRECT"
-    iap_item_display {
-      sku: "pgorelease.april3_2026_deluxe_event_pass_track_unlock"
-      sort_order: 1
-      hidden: true
-      title: "season_pass_premium_track_title_steeled_resolve_2026"
-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-      sku_enable_time: "2025-04-28T10:00:00"
-      sku_disable_time: "2025-05-06T20:00:00"
-      sku_enable_time_utc_ms: 1745834400000
-      sku_disable_time_utc_ms: 1746561600000
-      image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Memory_Lane_Meltan_Celebration_SRR_v1-1024x576.jpg"
-    }
-  }
-}
-template {
   template_id: "EVENT_PASS_BONUS_RANKS_FEATURE_GATE"
   data {
     template_id: "EVENT_PASS_BONUS_RANKS_FEATURE_GATE"
@@ -89098,2091 +89002,6 @@ template {
       sku_enable_time_utc_ms: 1738576800000
       sku_disable_time_utc_ms: 1772704800000
       image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GO_Pass_February_TICKET_v1-1024x576-nologo.jpg"
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
-    event_pass_settings {
-      prefix: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
-      points_item_id: 2107
-      track_conditions {
-        track: FREE
-        track_title_key: "season_pass_base_track_title_sustainabilityweek2026"
-      }
-      track_conditions {
-        track: PREMIUM
-        badge: 5900
-        track_title_key: "season_pass_premium_track_title_sustainabilityweek2026"
-      }
-      expiration_time: "2026-04-20T20:00:00"
-      max_tier_level: 60
-      additional_bonus_tiers_level: 31
-      event_pass_display_settings {
-        bonus_boxes {
-          text: "quest_catch_pokemon_singular"
-          icon_type: SPAWN_UNKNOWN
-          quantity: 5
-        }
-        bonus_boxes {
-          text: "quest_hatch_egg_singular"
-          icon_type: EGG
-          quantity: 40
-        }
-        bonus_boxes {
-          text: "quest_win_raid_singular"
-          icon_type: RAID
-          quantity: 100
-        }
-        event_pass_track_upgrade_descriptions {
-          pass_track_upgrade_header_description: "season_pass_sustainabilityweek2026_track_upgrade_header_description"
-          event_pass_track_to_upgrade_to: PREMIUM
-          track_unlock_sku_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-          track_unlock_plus_points_sku_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-          event_duration_key: "season_pass_sustainabilityweek2026_event_duration"
-          upgrade_description_key: "season_pass_sustainabilityweek2026_upgrade_description"
-          ranks_to_highlight_rewards: 1
-          ranks_to_highlight_rewards: 3
-          ranks_to_highlight_rewards: 15
-          details_link_key: "season_pass_details_link_sustainabilityweek2026"
-          track_unlock_image_url: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
-          track_unlock_plus_points_image_url: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
-        }
-        event_pass_title_key: "season_pass_base_track_title_sustainabilityweek2026"
-        header_icon_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
-        premium_reward_banner_top: "event_pass_premium_reward_banner_top_text"
-        premium_reward_banner_middle: "sustainabilityweek2026_avatar_item"
-        premium_reward_banner_bottom: "event_pass_premium_reward_banner_bottom_text_rank_15_reward"
-        premium_reward_banner_image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
-        premium_rewards_description: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
-        today_view_section: SEASONAL_EVENT_PASS_SECTION
-        section_display_priority: 11
-      }
-      grace_period_end_time: "2026-04-22T20:00:00"
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_FREE"
-    event_pass_tier_settings {
-      rank: 10
-      track: FREE
-      min_points_required: 900
-      rewards {
-        type: PLAYER_ATTRIBUTE
-        player_attribute {
-          key: "sustainabilityweek2026_season_pass_rank_01"
-          duration_mins: 131487
-        }
-      }
-      bonus_settings {
-        event_name: "season_pass_milestone_bonus_title_01"
-        bonus_boxes {
-          text: "pokestop_spin_xp_double"
-          icon_type: XP
-        }
-      }
-      active_bonus_display_settings {
-        bonus_boxes {
-          text: "pokestop_spin_xp_double"
-          icon_type: XP
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_PREMIUM"
-    event_pass_tier_settings {
-      rank: 10
-      track: PREMIUM
-      rewards {
-        type: PLAYER_ATTRIBUTE
-        player_attribute {
-          key: "sustainabilityweek2026_season_pass_rank_01_paid"
-          duration_mins: 131487
-        }
-      }
-      bonus_settings {
-        event_name: "season_pass_milestone_bonus_title_01"
-        bonus_boxes {
-          text: "pokestop_spin_xp_triple"
-          icon_type: XP
-        }
-      }
-      active_bonus_display_settings {
-        bonus_boxes {
-          text: "pokestop_spin_xp_triple"
-          icon_type: XP
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_FREE"
-    event_pass_tier_settings {
-      rank: 11
-      track: FREE
-      min_points_required: 1000
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_ULTRA_BALL
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_PREMIUM"
-    event_pass_tier_settings {
-      rank: 11
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_ULTRA_BALL
-          amount: 20
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_FREE"
-    event_pass_tier_settings {
-      rank: 12
-      track: FREE
-      min_points_required: 1100
-      rewards {
-        type: CANDY
-        candy {
-          pokemon_id: COMBEE
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_PREMIUM"
-    event_pass_tier_settings {
-      rank: 12
-      track: PREMIUM
-      rewards {
-        type: XL_CANDY
-        xl_candy {
-          pokemon_id: COMBEE
-          amount: 5
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_FREE"
-    event_pass_tier_settings {
-      rank: 13
-      track: FREE
-      min_points_required: 1200
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: COMBEE
-          pokemon_display {
-            form: COMBEE_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_PREMIUM"
-    event_pass_tier_settings {
-      rank: 13
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: COMBEE
-          pokemon_display {
-            form: COMBEE_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_FREE"
-    event_pass_tier_settings {
-      rank: 14
-      track: FREE
-      min_points_required: 1300
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_RAZZ_BERRY
-          amount: 5
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_PREMIUM"
-    event_pass_tier_settings {
-      rank: 14
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_XL_RARE_CANDY
-          amount: 1
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_FREE"
-    event_pass_tier_settings {
-      rank: 15
-      track: FREE
-      min_points_required: 1400
-      rewards {
-        type: STARDUST
-        stardust: 2500
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_PREMIUM"
-    event_pass_tier_settings {
-      rank: 15
-      track: PREMIUM
-      rewards {
-        type: AVATAR_CLOTHING
-        neutral_avatar_item_template {
-          neutral_avatar_item_template_string_1: "N_AVATAR_n_pose_sustainability"
-          neutral_avatar_item_template_string_2: "N_DISPLAY_n_pose_sustainability"
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_FREE"
-    event_pass_tier_settings {
-      rank: 16
-      track: FREE
-      min_points_required: 1500
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: SHELLOS
-          pokemon_display {
-            form: SHELLOS_WEST_SEA
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_PREMIUM"
-    event_pass_tier_settings {
-      rank: 16
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: SHELLOS
-          pokemon_display {
-            form: SHELLOS_WEST_SEA
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_FREE"
-    event_pass_tier_settings {
-      rank: 17
-      track: FREE
-      min_points_required: 1600
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: SHELLOS
-          pokemon_display {
-            form: SHELLOS_EAST_SEA
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_PREMIUM"
-    event_pass_tier_settings {
-      rank: 17
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: SHELLOS
-          pokemon_display {
-            form: SHELLOS_EAST_SEA
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_FREE"
-    event_pass_tier_settings {
-      rank: 18
-      track: FREE
-      min_points_required: 1700
-      rewards {
-        type: CANDY
-        candy {
-          pokemon_id: CORSOLA
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_PREMIUM"
-    event_pass_tier_settings {
-      rank: 18
-      track: PREMIUM
-      rewards {
-        type: XL_CANDY
-        xl_candy {
-          pokemon_id: CORSOLA
-          amount: 5
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_FREE"
-    event_pass_tier_settings {
-      rank: 19
-      track: FREE
-      min_points_required: 1800
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CORSOLA
-          pokemon_display {
-            form: CORSOLA_SPRING_2026
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_PREMIUM"
-    event_pass_tier_settings {
-      rank: 19
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CORSOLA
-          pokemon_display {
-            form: CORSOLA_SPRING_2026
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_FREE"
-    event_pass_tier_settings {
-      rank: 1
-      track: FREE
-      rewards {
-        type: EXPERIENCE
-        exp: 5000
-      }
-      rewards {
-        type: PLAYER_ATTRIBUTE
-        player_attribute {
-          key: "sustainability2026_season_pass_entitlement"
-          duration_mins: 131487
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_PREMIUM"
-    event_pass_tier_settings {
-      rank: 1
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_INCUBATOR_BASIC
-          amount: 1
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_FREE"
-    event_pass_tier_settings {
-      rank: 20
-      track: FREE
-      min_points_required: 1900
-      rewards {
-        type: PLAYER_ATTRIBUTE
-        player_attribute {
-          key: "sustainabilityweek2026_season_pass_rank_02"
-          duration_mins: 131487
-        }
-      }
-      bonus_settings {
-        event_name: "season_pass_milestone_bonus_title_02"
-        bonus_boxes {
-          text: "incubator_distance_half"
-          icon_type: EGG_INCUBATOR
-        }
-      }
-      active_bonus_display_settings {
-        bonus_boxes {
-          text: "pokestop_spin_xp_double"
-          icon_type: XP
-        }
-        bonus_boxes {
-          text: "incubator_distance_half"
-          icon_type: EGG_INCUBATOR
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_PREMIUM"
-    event_pass_tier_settings {
-      rank: 20
-      track: PREMIUM
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_FREE"
-    event_pass_tier_settings {
-      rank: 21
-      track: FREE
-      min_points_required: 2000
-      rewards {
-        type: CANDY
-        candy {
-          pokemon_id: CHERUBI
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_PREMIUM"
-    event_pass_tier_settings {
-      rank: 21
-      track: PREMIUM
-      rewards {
-        type: XL_CANDY
-        xl_candy {
-          pokemon_id: CHERUBI
-          amount: 5
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_FREE"
-    event_pass_tier_settings {
-      rank: 22
-      track: FREE
-      min_points_required: 2100
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CHERUBI
-          pokemon_display {
-            form: CHERUBI_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_PREMIUM"
-    event_pass_tier_settings {
-      rank: 22
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CHERUBI
-          pokemon_display {
-            form: CHERUBI_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_FREE"
-    event_pass_tier_settings {
-      rank: 23
-      track: FREE
-      min_points_required: 2200
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_PINAP_BERRY
-          amount: 5
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_PREMIUM"
-    event_pass_tier_settings {
-      rank: 23
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_XL_RARE_CANDY
-          amount: 1
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_FREE"
-    event_pass_tier_settings {
-      rank: 24
-      track: FREE
-      min_points_required: 2300
-      rewards {
-        type: STARDUST
-        stardust: 2500
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_PREMIUM"
-    event_pass_tier_settings {
-      rank: 24
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_INCENSE_ORDINARY
-          amount: 1
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_FREE"
-    event_pass_tier_settings {
-      rank: 25
-      track: FREE
-      min_points_required: 2400
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_GOLDEN_RAZZ_BERRY
-          amount: 2
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_PREMIUM"
-    event_pass_tier_settings {
-      rank: 25
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_GOLDEN_PINAP_BERRY
-          amount: 2
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_FREE"
-    event_pass_tier_settings {
-      rank: 26
-      track: FREE
-      min_points_required: 2500
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_RARE_CANDY
-          amount: 2
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_PREMIUM"
-    event_pass_tier_settings {
-      rank: 26
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_XL_RARE_CANDY
-          amount: 1
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_FREE"
-    event_pass_tier_settings {
-      rank: 27
-      track: FREE
-      min_points_required: 2600
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: TOGETIC
-          pokemon_display {
-            form: TOGETIC_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_PREMIUM"
-    event_pass_tier_settings {
-      rank: 27
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: TOGETIC
-          pokemon_display {
-            form: TOGETIC_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_FREE"
-    event_pass_tier_settings {
-      rank: 28
-      track: FREE
-      min_points_required: 2700
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: TRUBBISH
-          pokemon_display {
-            form: TRUBBISH_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_PREMIUM"
-    event_pass_tier_settings {
-      rank: 28
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: TRUBBISH
-          pokemon_display {
-            form: TRUBBISH_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_FREE"
-    event_pass_tier_settings {
-      rank: 29
-      track: FREE
-      min_points_required: 2800
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: LAPRAS
-          pokemon_display {
-            form: LAPRAS_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_PREMIUM"
-    event_pass_tier_settings {
-      rank: 29
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: LAPRAS
-          pokemon_display {
-            form: LAPRAS_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_FREE"
-    event_pass_tier_settings {
-      rank: 2
-      track: FREE
-      min_points_required: 100
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_POKE_BALL
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_PREMIUM"
-    event_pass_tier_settings {
-      rank: 2
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_POKE_BALL
-          amount: 30
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_FREE"
-    event_pass_tier_settings {
-      rank: 30
-      track: FREE
-      min_points_required: 2900
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CORSOLA
-          pokemon_display {
-            form: CORSOLA_SPRING_2026
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_PREMIUM"
-    event_pass_tier_settings {
-      rank: 30
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CORSOLA
-          pokemon_display {
-            form: CORSOLA_SPRING_2026
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_FREE"
-    event_pass_tier_settings {
-      rank: 31
-      track: FREE
-      min_points_required: 3000
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_PREMIUM"
-    event_pass_tier_settings {
-      rank: 31
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_FREE"
-    event_pass_tier_settings {
-      rank: 32
-      track: FREE
-      min_points_required: 3100
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_PREMIUM"
-    event_pass_tier_settings {
-      rank: 32
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_FREE"
-    event_pass_tier_settings {
-      rank: 33
-      track: FREE
-      min_points_required: 3200
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_PREMIUM"
-    event_pass_tier_settings {
-      rank: 33
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_FREE"
-    event_pass_tier_settings {
-      rank: 34
-      track: FREE
-      min_points_required: 3300
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_PREMIUM"
-    event_pass_tier_settings {
-      rank: 34
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_FREE"
-    event_pass_tier_settings {
-      rank: 35
-      track: FREE
-      min_points_required: 3400
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_PREMIUM"
-    event_pass_tier_settings {
-      rank: 35
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_FREE"
-    event_pass_tier_settings {
-      rank: 36
-      track: FREE
-      min_points_required: 3500
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_PREMIUM"
-    event_pass_tier_settings {
-      rank: 36
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_FREE"
-    event_pass_tier_settings {
-      rank: 37
-      track: FREE
-      min_points_required: 3600
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_PREMIUM"
-    event_pass_tier_settings {
-      rank: 37
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_FREE"
-    event_pass_tier_settings {
-      rank: 38
-      track: FREE
-      min_points_required: 3700
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_PREMIUM"
-    event_pass_tier_settings {
-      rank: 38
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_FREE"
-    event_pass_tier_settings {
-      rank: 39
-      track: FREE
-      min_points_required: 3800
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_PREMIUM"
-    event_pass_tier_settings {
-      rank: 39
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_FREE"
-    event_pass_tier_settings {
-      rank: 3
-      track: FREE
-      min_points_required: 200
-      rewards {
-        type: STARDUST
-        stardust: 2500
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_PREMIUM"
-    event_pass_tier_settings {
-      rank: 3
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_INCENSE_ORDINARY
-          amount: 1
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_FREE"
-    event_pass_tier_settings {
-      rank: 40
-      track: FREE
-      min_points_required: 3900
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_PREMIUM"
-    event_pass_tier_settings {
-      rank: 40
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_FREE"
-    event_pass_tier_settings {
-      rank: 41
-      track: FREE
-      min_points_required: 4000
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_PREMIUM"
-    event_pass_tier_settings {
-      rank: 41
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_FREE"
-    event_pass_tier_settings {
-      rank: 42
-      track: FREE
-      min_points_required: 4100
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_PREMIUM"
-    event_pass_tier_settings {
-      rank: 42
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_FREE"
-    event_pass_tier_settings {
-      rank: 43
-      track: FREE
-      min_points_required: 4200
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_PREMIUM"
-    event_pass_tier_settings {
-      rank: 43
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_FREE"
-    event_pass_tier_settings {
-      rank: 44
-      track: FREE
-      min_points_required: 4300
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_PREMIUM"
-    event_pass_tier_settings {
-      rank: 44
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_FREE"
-    event_pass_tier_settings {
-      rank: 45
-      track: FREE
-      min_points_required: 4400
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_PREMIUM"
-    event_pass_tier_settings {
-      rank: 45
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_FREE"
-    event_pass_tier_settings {
-      rank: 46
-      track: FREE
-      min_points_required: 4500
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_PREMIUM"
-    event_pass_tier_settings {
-      rank: 46
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_FREE"
-    event_pass_tier_settings {
-      rank: 47
-      track: FREE
-      min_points_required: 4600
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_PREMIUM"
-    event_pass_tier_settings {
-      rank: 47
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_FREE"
-    event_pass_tier_settings {
-      rank: 48
-      track: FREE
-      min_points_required: 4700
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_PREMIUM"
-    event_pass_tier_settings {
-      rank: 48
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_FREE"
-    event_pass_tier_settings {
-      rank: 49
-      track: FREE
-      min_points_required: 4800
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_PREMIUM"
-    event_pass_tier_settings {
-      rank: 49
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_FREE"
-    event_pass_tier_settings {
-      rank: 4
-      track: FREE
-      min_points_required: 300
-      rewards {
-        type: CANDY
-        candy {
-          pokemon_id: CASTFORM
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_PREMIUM"
-    event_pass_tier_settings {
-      rank: 4
-      track: PREMIUM
-      rewards {
-        type: XL_CANDY
-        xl_candy {
-          pokemon_id: CASTFORM
-          amount: 5
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_FREE"
-    event_pass_tier_settings {
-      rank: 50
-      track: FREE
-      min_points_required: 4900
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_PREMIUM"
-    event_pass_tier_settings {
-      rank: 50
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_FREE"
-    event_pass_tier_settings {
-      rank: 51
-      track: FREE
-      min_points_required: 5000
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_PREMIUM"
-    event_pass_tier_settings {
-      rank: 51
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_FREE"
-    event_pass_tier_settings {
-      rank: 52
-      track: FREE
-      min_points_required: 5100
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_PREMIUM"
-    event_pass_tier_settings {
-      rank: 52
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_FREE"
-    event_pass_tier_settings {
-      rank: 53
-      track: FREE
-      min_points_required: 5200
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_PREMIUM"
-    event_pass_tier_settings {
-      rank: 53
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_FREE"
-    event_pass_tier_settings {
-      rank: 54
-      track: FREE
-      min_points_required: 5300
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_PREMIUM"
-    event_pass_tier_settings {
-      rank: 54
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_FREE"
-    event_pass_tier_settings {
-      rank: 55
-      track: FREE
-      min_points_required: 5400
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_PREMIUM"
-    event_pass_tier_settings {
-      rank: 55
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_FREE"
-    event_pass_tier_settings {
-      rank: 56
-      track: FREE
-      min_points_required: 5500
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_PREMIUM"
-    event_pass_tier_settings {
-      rank: 56
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_FREE"
-    event_pass_tier_settings {
-      rank: 57
-      track: FREE
-      min_points_required: 5600
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_PREMIUM"
-    event_pass_tier_settings {
-      rank: 57
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_FREE"
-    event_pass_tier_settings {
-      rank: 58
-      track: FREE
-      min_points_required: 5700
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_PREMIUM"
-    event_pass_tier_settings {
-      rank: 58
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_FREE"
-    event_pass_tier_settings {
-      rank: 59
-      track: FREE
-      min_points_required: 5800
-      rewards {
-        type: STARDUST
-        stardust: 50
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_PREMIUM"
-    event_pass_tier_settings {
-      rank: 59
-      track: PREMIUM
-      rewards {
-        type: STARDUST
-        stardust: 100
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_FREE"
-    event_pass_tier_settings {
-      rank: 5
-      track: FREE
-      min_points_required: 400
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CASTFORM
-          pokemon_display {
-            form: CASTFORM_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_PREMIUM"
-    event_pass_tier_settings {
-      rank: 5
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CASTFORM
-          pokemon_display {
-            form: CASTFORM_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_FREE"
-    event_pass_tier_settings {
-      rank: 60
-      track: FREE
-      min_points_required: 5900
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CORSOLA
-          pokemon_display {
-            form: CORSOLA_SPRING_2026
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_PREMIUM"
-    event_pass_tier_settings {
-      rank: 60
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: CORSOLA
-          pokemon_display {
-            form: CORSOLA_SPRING_2026
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_FREE"
-    event_pass_tier_settings {
-      rank: 6
-      track: FREE
-      min_points_required: 500
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_GREAT_BALL
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_PREMIUM"
-    event_pass_tier_settings {
-      rank: 6
-      track: PREMIUM
-      rewards {
-        type: ITEM
-        item {
-          item: ITEM_GREAT_BALL
-          amount: 20
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_FREE"
-    event_pass_tier_settings {
-      rank: 7
-      track: FREE
-      min_points_required: 600
-      rewards {
-        type: EXPERIENCE
-        exp: 5000
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_PREMIUM"
-    event_pass_tier_settings {
-      rank: 7
-      track: PREMIUM
-      rewards {
-        type: EXPERIENCE
-        exp: 7500
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_FREE"
-    event_pass_tier_settings {
-      rank: 8
-      track: FREE
-      min_points_required: 700
-      rewards {
-        type: CANDY
-        candy {
-          pokemon_id: FOONGUS
-          amount: 10
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_PREMIUM"
-    event_pass_tier_settings {
-      rank: 8
-      track: PREMIUM
-      rewards {
-        type: XL_CANDY
-        xl_candy {
-          pokemon_id: FOONGUS
-          amount: 5
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_FREE"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_FREE"
-    event_pass_tier_settings {
-      rank: 9
-      track: FREE
-      min_points_required: 800
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: FOONGUS
-          pokemon_display {
-            form: FOONGUS_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
-    }
-  }
-}
-template {
-  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_PREMIUM"
-  data {
-    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_PREMIUM"
-    event_pass_tier_settings {
-      rank: 9
-      track: PREMIUM
-      rewards {
-        type: POKEMON_ENCOUNTER
-        pokemon_encounter {
-          pokemon_id: FOONGUS
-          pokemon_display {
-            form: FOONGUS_NORMAL
-          }
-          is_featured_pokemon: true
-        }
-      }
     }
   }
 }
@@ -158620,7 +156439,7 @@ template {
     iap_category_display {
       category: IAP_CATEGORY_AVATAR
       sort_order: 5
-      image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGOAvatar_HammerPose_1024%20x%20512%20no%20logo.jpg"
+      image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_avatar_mimikyu_on.jpg"
       description: "avatar_shop_description_new"
     }
   }
@@ -159394,15 +157213,6 @@ template {
   }
 }
 template {
-  template_id: "IS_SKU_AVAILABLE_NO_APP_ID_CODE_GATE"
-  data {
-    template_id: "IS_SKU_AVAILABLE_NO_APP_ID_CODE_GATE"
-    code_gate {
-      is_enabled: true
-    }
-  }
-}
-template {
   template_id: "ITEM_BATTLE_PASS_TICKET"
   data {
     template_id: "ITEM_BATTLE_PASS_TICKET"
@@ -159721,7 +157531,7 @@ template {
       ignore_inventory_space: true
       item_cap: 999999
       event_pass_point {
-        event_pass_id: "EVENT_PASS_STEELEDRESOLVE2026_EVENT"
+        event_pass_id: "EVENT_PASS_30ANNIV2026_EVENT"
       }
       time_period_counters {
         player_activity {
@@ -159791,7 +157601,7 @@ template {
       }
       time_period_counters {
         player_activity {
-          limit: 500
+          limit: 300
         }
       }
     }
@@ -160733,8 +158543,8 @@ template {
     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_04"
     item_expiration_settings {
       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_04
-      expiratiion_time: "2026-05-08T20:00:00"
-      emergency_expiration_time: "2026-05-09T10:00:00"
+      expiratiion_time: "2026-03-17T10:00:00"
+      emergency_expiration_time: "2026-03-17T20:00:00"
     }
   }
 }
@@ -160799,7 +158609,7 @@ template {
     template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
     item_expiration_settings {
       item: ITEM_INCUBATOR_TIMED
-      expiratiion_time: "2026-01-13T10:00:00"
+      expiratiion_time: "2026-04-14T10:00:00"
     }
   }
 }
@@ -162585,7 +160395,7 @@ template {
   data {
     template_id: "LC_2024_JAKARTA_AIRADVENTURES_001"
     location_card_settings {
-      location_card: LC_2024_JAKARTA_AIRADVENTURES_001
+      location_card: 23
       image_url: "lc_AirAdv2024_jakarta"
     }
   }
@@ -162616,7 +160426,7 @@ template {
   data {
     template_id: "LC_2024_MILAN_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2024_MILAN_CITYSAFARI_001
+      location_card: 72
       image_url: "lc_CitySafari2024_milan"
     }
   }
@@ -162766,7 +160576,7 @@ template {
   data {
     template_id: "LC_2024_MUMBAI_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2024_MUMBAI_CITYSAFARI_001
+      location_card: 73
       image_url: "lc_CitySafari2024_mumbai"
     }
   }
@@ -162787,7 +160597,7 @@ template {
   data {
     template_id: "LC_2024_SANTIAGO_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2024_SANTIAGO_CITYSAFARI_001
+      location_card: 74
       image_url: "lc_CitySafari2024_santiago"
     }
   }
@@ -162818,7 +160628,7 @@ template {
   data {
     template_id: "LC_2024_SINGAPORE_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2024_SINGAPORE_CITYSAFARI_001
+      location_card: 75
       image_url: "lc_CitySafari2024_singapore"
     }
   }
@@ -162858,7 +160668,7 @@ template {
   data {
     template_id: "LC_2025_AMSTERDAM_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2025_AMSTERDAM_CITYSAFARI_001
+      location_card: 146
       image_url: "lc_citysafari2025_amsterdam"
     }
   }
@@ -162868,7 +160678,7 @@ template {
   data {
     template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
     location_card_settings {
-      location_card: LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001
+      location_card: 143
       image_url: "lc_Wcs2025_anaheim"
     }
   }
@@ -162878,7 +160688,7 @@ template {
   data {
     template_id: "LC_2025_BANGKOK_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2025_BANGKOK_CITYSAFARI_001
+      location_card: 147
       image_url: "lc_citysafari2025_bangkok"
     }
   }
@@ -162888,7 +160698,7 @@ template {
   data {
     template_id: "LC_2025_BERLIN_ROADTRIP_001"
     location_card_settings {
-      location_card: LC_2025_BERLIN_ROADTRIP_001
+      location_card: 105
       image_url: "lc_roadtrip2025_berlin"
     }
   }
@@ -162898,7 +160708,7 @@ template {
   data {
     template_id: "LC_2025_CANCUN_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2025_CANCUN_CITYSAFARI_001
+      location_card: 148
       image_url: "lc_citysafari2025_cancun"
     }
   }
@@ -162908,7 +160718,7 @@ template {
   data {
     template_id: "LC_2025_CHERRY_BLOSSOM_FESTIVAL"
     location_card_settings {
-      location_card: LC_2025_CHERRY_BLOSSOM_FESTIVAL
+      location_card: 98
       image_url: "lc_CherryBlossomFest2025_yeouido"
     }
   }
@@ -162918,7 +160728,7 @@ template {
   data {
     template_id: "LC_2025_COLOGNE_ROADTRIP_001"
     location_card_settings {
-      location_card: LC_2025_COLOGNE_ROADTRIP_001
+      location_card: 107
       image_url: "lc_roadtrip2025_cologne"
     }
   }
@@ -162928,7 +160738,7 @@ template {
   data {
     template_id: "LC_2025_GOWA_NAGASAKI"
     location_card_settings {
-      location_card: LC_2025_GOWA_NAGASAKI
+      location_card: 157
       image_url: "lc_nagasaki2025"
     }
   }
@@ -162938,7 +160748,7 @@ template {
   data {
     template_id: "LC_2025_HAGUE_ROADTRIP_001"
     location_card_settings {
-      location_card: LC_2025_HAGUE_ROADTRIP_001
+      location_card: 106
       image_url: "lc_roadtrip2025_hague"
     }
   }
@@ -162948,7 +160758,7 @@ template {
   data {
     template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
     location_card_settings {
-      location_card: LC_2025_JANGHEUNG_SUMMER_FESTIVAL
+      location_card: 145
       image_url: "lc_Jangheung_Water_Festival_2025"
     }
   }
@@ -162958,7 +160768,7 @@ template {
   data {
     template_id: "LC_2025_JERSEYCITY_GOFEST_001"
     location_card_settings {
-      location_card: LC_2025_JERSEYCITY_GOFEST_001
+      location_card: 79
       image_url: "lc_GoFest2025_jerseycity"
       card_type: LOCATION_CARD
     }
@@ -162969,7 +160779,7 @@ template {
   data {
     template_id: "LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL"
     location_card_settings {
-      location_card: LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL
+      location_card: 212
       image_url: "lc_2025_kr_pyeongchangWinterFestival"
     }
   }
@@ -162979,7 +160789,7 @@ template {
   data {
     template_id: "LC_2025_LONDON_ROADTRIP_001"
     location_card_settings {
-      location_card: LC_2025_LONDON_ROADTRIP_001
+      location_card: 102
       image_url: "lc_roadtrip2025_london"
     }
   }
@@ -163000,7 +160810,7 @@ template {
   data {
     template_id: "LC_2025_MANCHESTER_ROADTRIP_001"
     location_card_settings {
-      location_card: LC_2025_MANCHESTER_ROADTRIP_001
+      location_card: 101
       image_url: "lc_roadtrip2025_manchester"
     }
   }
@@ -163021,7 +160831,7 @@ template {
   data {
     template_id: "LC_2025_NFL_001"
     location_card_settings {
-      location_card: LC_2025_NFL_001
+      location_card: 225
       image_url: "lc_NFL_cardinals"
     }
   }
@@ -163031,7 +160841,7 @@ template {
   data {
     template_id: "LC_2025_OSAKA_EVENT_001"
     location_card_settings {
-      location_card: LC_2025_OSAKA_EVENT_001
+      location_card: 77
       image_url: "lc_OsakaEvent2025_01"
     }
   }
@@ -163041,7 +160851,7 @@ template {
   data {
     template_id: "LC_2025_OSAKA_EVENT_002"
     location_card_settings {
-      location_card: LC_2025_OSAKA_EVENT_002
+      location_card: 93
       image_url: "lc_OsakaEvent2025_02"
     }
   }
@@ -163051,7 +160861,7 @@ template {
   data {
     template_id: "LC_2025_OSAKA_EVENT_003"
     location_card_settings {
-      location_card: LC_2025_OSAKA_EVENT_003
+      location_card: 94
       image_url: "lc_OsakaEvent2025_03"
     }
   }
@@ -163061,7 +160871,7 @@ template {
   data {
     template_id: "LC_2025_OSAKA_GOFEST_001"
     location_card_settings {
-      location_card: LC_2025_OSAKA_GOFEST_001
+      location_card: 78
       image_url: "lc_GoFest2025_osaka"
       card_type: LOCATION_CARD
     }
@@ -163072,7 +160882,7 @@ template {
   data {
     template_id: "LC_2025_PARIS_001"
     location_card_settings {
-      location_card: LC_2025_PARIS_001
+      location_card: 151
       image_url: "lc_Paris2025_01"
     }
   }
@@ -163082,7 +160892,7 @@ template {
   data {
     template_id: "LC_2025_PARIS_002"
     location_card_settings {
-      location_card: LC_2025_PARIS_002
+      location_card: 152
       image_url: "lc_Paris2025_02"
     }
   }
@@ -163092,7 +160902,7 @@ template {
   data {
     template_id: "LC_2025_PARIS_GOFEST_001"
     location_card_settings {
-      location_card: LC_2025_PARIS_GOFEST_001
+      location_card: 80
       image_url: "lc_GoFest2025_paris"
       card_type: LOCATION_CARD
     }
@@ -163103,7 +160913,7 @@ template {
   data {
     template_id: "LC_2025_PARIS_ROADTRIP_001"
     location_card_settings {
-      location_card: LC_2025_PARIS_ROADTRIP_001
+      location_card: 103
       image_url: "lc_roadtrip2025_paris"
     }
   }
@@ -163113,7 +160923,7 @@ template {
   data {
     template_id: "LC_2025_TAIPEICITY_AMUSEMENT_PARK"
     location_card_settings {
-      location_card: LC_2025_TAIPEICITY_AMUSEMENT_PARK
+      location_card: 153
       image_url: "lc_taipeiAmusementPark_2025"
     }
   }
@@ -163123,7 +160933,7 @@ template {
   data {
     template_id: "LC_2025_VALENCIA_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2025_VALENCIA_CITYSAFARI_001
+      location_card: 149
       image_url: "lc_citysafari2025_valencia"
     }
   }
@@ -163133,7 +160943,7 @@ template {
   data {
     template_id: "LC_2025_VALENCIA_ROADTRIP_001"
     location_card_settings {
-      location_card: LC_2025_VALENCIA_ROADTRIP_001
+      location_card: 104
       image_url: "lc_roadtrip2025_valencia"
     }
   }
@@ -163143,7 +160953,7 @@ template {
   data {
     template_id: "LC_2025_VANCOUVER_CITYSAFARI_001"
     location_card_settings {
-      location_card: LC_2025_VANCOUVER_CITYSAFARI_001
+      location_card: 150
       image_url: "lc_citysafari2025_vancouver"
     }
   }
@@ -163153,7 +160963,7 @@ template {
   data {
     template_id: "LC_2026_COLOGNE_CARNIVAL_001"
     location_card_settings {
-      location_card: LC_2026_COLOGNE_CARNIVAL_001
+      location_card: 244
       image_url: "lc_carnivalFlamigo_cologne_2026"
     }
   }
@@ -163163,7 +160973,7 @@ template {
   data {
     template_id: "LC_2026_LOSANGELES_GOTOUR_001"
     location_card_settings {
-      location_card: LC_2026_LOSANGELES_GOTOUR_001
+      location_card: 214
       image_url: "lc_GoTour2026_losAngeles"
       card_type: LOCATION_CARD
     }
@@ -163174,7 +160984,7 @@ template {
   data {
     template_id: "LC_2026_NPB_001"
     location_card_settings {
-      location_card: LC_2026_NPB_001
+      location_card: 252
       image_url: "lc_2026_ppk_001"
     }
   }
@@ -163184,7 +160994,7 @@ template {
   data {
     template_id: "LC_2026_NPB_002"
     location_card_settings {
-      location_card: LC_2026_NPB_002
+      location_card: 253
       image_url: "lc_2026_NPB_yomiuriGiants"
     }
   }
@@ -163194,7 +161004,7 @@ template {
   data {
     template_id: "LC_2026_NPB_003"
     location_card_settings {
-      location_card: LC_2026_NPB_003
+      location_card: 254
       image_url: "lc_2026_ppk_001"
     }
   }
@@ -163204,7 +161014,7 @@ template {
   data {
     template_id: "LC_2026_NPB_004"
     location_card_settings {
-      location_card: LC_2026_NPB_004
+      location_card: 255
       image_url: "lc_2026_NPB_koshienHanshinTigers"
     }
   }
@@ -163214,7 +161024,7 @@ template {
   data {
     template_id: "LC_2026_NPB_005"
     location_card_settings {
-      location_card: LC_2026_NPB_005
+      location_card: 256
       image_url: "lc_2026_NPB_rakutenEagles"
     }
   }
@@ -163224,8 +161034,8 @@ template {
   data {
     template_id: "LC_2026_NPB_006"
     location_card_settings {
-      location_card: LC_2026_NPB_006
-      image_url: "lc_2026_NPB_hiroshimaCarp"
+      location_card: 257
+      image_url: "lc_2026_ppk_001"
     }
   }
 }
@@ -163234,7 +161044,7 @@ template {
   data {
     template_id: "LC_2026_NPB_007"
     location_card_settings {
-      location_card: LC_2026_NPB_007
+      location_card: 258
       image_url: "lc_2026_ppk_001"
     }
   }
@@ -163244,8 +161054,8 @@ template {
   data {
     template_id: "LC_2026_NPB_008"
     location_card_settings {
-      location_card: LC_2026_NPB_008
-      image_url: "lc_2026_NPB_softbankHawks"
+      location_card: 259
+      image_url: "lc_2026_ppk_001"
     }
   }
 }
@@ -163254,8 +161064,8 @@ template {
   data {
     template_id: "LC_2026_NPB_009"
     location_card_settings {
-      location_card: LC_2026_NPB_009
-      image_url: "lc_2026_NPB_kyocera"
+      location_card: 260
+      image_url: "lc_2026_ppk_001"
     }
   }
 }
@@ -163264,8 +161074,8 @@ template {
   data {
     template_id: "LC_2026_NPB_010"
     location_card_settings {
-      location_card: LC_2026_NPB_010
-      image_url: "lc_2026_NPB_belluna"
+      location_card: 261
+      image_url: "lc_2026_ppk_001"
     }
   }
 }
@@ -163274,8 +161084,8 @@ template {
   data {
     template_id: "LC_2026_NPB_011"
     location_card_settings {
-      location_card: LC_2026_NPB_011
-      image_url: "lc_2026_NPB_zozoMarine"
+      location_card: 262
+      image_url: "lc_2026_ppk_001"
     }
   }
 }
@@ -163284,7 +161094,7 @@ template {
   data {
     template_id: "LC_2026_NPB_012"
     location_card_settings {
-      location_card: LC_2026_NPB_012
+      location_card: 263
       image_url: "lc_2026_ppk_001"
     }
   }
@@ -163294,7 +161104,7 @@ template {
   data {
     template_id: "LC_2026_NPB_013"
     location_card_settings {
-      location_card: LC_2026_NPB_013
+      location_card: 264
       image_url: "lc_2026_ppk_001"
     }
   }
@@ -163304,7 +161114,7 @@ template {
   data {
     template_id: "LC_2026_PPK_001"
     location_card_settings {
-      location_card: LC_2026_PPK_001
+      location_card: 241
       image_url: "lc_2026_ppk_001"
     }
   }
@@ -163314,7 +161124,7 @@ template {
   data {
     template_id: "LC_2026_RIODEJANEIRO_CARNIVAL_001"
     location_card_settings {
-      location_card: LC_2026_RIODEJANEIRO_CARNIVAL_001
+      location_card: 243
       image_url: "lc_carnivalFlamigo_rio_2026"
     }
   }
@@ -163324,7 +161134,7 @@ template {
   data {
     template_id: "LC_2026_TAINAN_GOTOUR_001"
     location_card_settings {
-      location_card: LC_2026_TAINAN_GOTOUR_001
+      location_card: 215
       image_url: "lc_GoTour2026_tainan"
       card_type: LOCATION_CARD
     }
@@ -163335,7 +161145,7 @@ template {
   data {
     template_id: "LC_CITYSAFARI2025_BUENOSAIRES"
     location_card_settings {
-      location_card: LC_CITYSAFARI2025_BUENOSAIRES
+      location_card: 160
       image_url: "lc_CitySafari2025_buenosAires"
     }
   }
@@ -163345,7 +161155,7 @@ template {
   data {
     template_id: "LC_CITYSAFARI2025_MIAMI"
     location_card_settings {
-      location_card: LC_CITYSAFARI2025_MIAMI
+      location_card: 161
       image_url: "lc_CitySafari2025_miami"
     }
   }
@@ -163355,7 +161165,7 @@ template {
   data {
     template_id: "LC_CITYSAFARI2025_SYDNEY"
     location_card_settings {
-      location_card: LC_CITYSAFARI2025_SYDNEY
+      location_card: 162
       image_url: "lc_CitySafari2025_sydney"
     }
   }
@@ -163365,7 +161175,7 @@ template {
   data {
     template_id: "LC_ID_CAR_FREE_DAY"
     location_card_settings {
-      location_card: LC_ID_CAR_FREE_DAY
+      location_card: 240
       image_url: "lc_ID_CarFreeDay"
     }
   }
@@ -163375,7 +161185,7 @@ template {
   data {
     template_id: "LC_JEJU_STAMP_RALLY"
     location_card_settings {
-      location_card: LC_JEJU_STAMP_RALLY
+      location_card: 158
       image_url: "lc_stampRally2025_Jeju"
     }
   }
@@ -163385,7 +161195,7 @@ template {
   data {
     template_id: "LC_POKELID_AICHI"
     location_card_settings {
-      location_card: LC_POKELID_AICHI
+      location_card: 182
       image_url: "lc_pokelid_aichi"
     }
   }
@@ -163395,7 +161205,7 @@ template {
   data {
     template_id: "LC_POKELID_AKITA"
     location_card_settings {
-      location_card: LC_POKELID_AKITA
+      location_card: 167
       image_url: "lc_pokelid_akita"
     }
   }
@@ -163405,7 +161215,7 @@ template {
   data {
     template_id: "LC_POKELID_AOMORI"
     location_card_settings {
-      location_card: LC_POKELID_AOMORI
+      location_card: 164
       image_url: "lc_pokelid_aomori"
     }
   }
@@ -163415,7 +161225,7 @@ template {
   data {
     template_id: "LC_POKELID_CHIBA"
     location_card_settings {
-      location_card: LC_POKELID_CHIBA
+      location_card: 172
       image_url: "lc_pokelid_chiba"
     }
   }
@@ -163425,7 +161235,7 @@ template {
   data {
     template_id: "LC_POKELID_EHIME"
     location_card_settings {
-      location_card: LC_POKELID_EHIME
+      location_card: 196
       image_url: "lc_pokelid_ehime"
     }
   }
@@ -163435,7 +161245,7 @@ template {
   data {
     template_id: "LC_POKELID_FUKUI"
     location_card_settings {
-      location_card: LC_POKELID_FUKUI
+      location_card: 179
       image_url: "lc_pokelid_fukui"
     }
   }
@@ -163445,7 +161255,7 @@ template {
   data {
     template_id: "LC_POKELID_FUKUOKA"
     location_card_settings {
-      location_card: LC_POKELID_FUKUOKA
+      location_card: 198
       image_url: "lc_pokelid_fukuoka"
     }
   }
@@ -163455,7 +161265,7 @@ template {
   data {
     template_id: "LC_POKELID_FUKUSHIMA"
     location_card_settings {
-      location_card: LC_POKELID_FUKUSHIMA
+      location_card: 168
       image_url: "lc_pokelid_fukushima"
     }
   }
@@ -163465,7 +161275,7 @@ template {
   data {
     template_id: "LC_POKELID_GIFU"
     location_card_settings {
-      location_card: LC_POKELID_GIFU
+      location_card: 180
       image_url: "lc_pokelid_gifu"
     }
   }
@@ -163475,7 +161285,7 @@ template {
   data {
     template_id: "LC_POKELID_HOKKAIDO"
     location_card_settings {
-      location_card: LC_POKELID_HOKKAIDO
+      location_card: 163
       image_url: "lc_pokelid_hokkaido"
     }
   }
@@ -163485,7 +161295,7 @@ template {
   data {
     template_id: "LC_POKELID_HYOGO"
     location_card_settings {
-      location_card: LC_POKELID_HYOGO
+      location_card: 187
       image_url: "lc_pokelid_hyogo"
     }
   }
@@ -163495,7 +161305,7 @@ template {
   data {
     template_id: "LC_POKELID_IBARAKI"
     location_card_settings {
-      location_card: LC_POKELID_IBARAKI
+      location_card: 175
       image_url: "lc_pokelid_ibaraki"
     }
   }
@@ -163505,7 +161315,7 @@ template {
   data {
     template_id: "LC_POKELID_ISHIKAWA"
     location_card_settings {
-      location_card: LC_POKELID_ISHIKAWA
+      location_card: 178
       image_url: "lc_pokelid_ishikawa"
     }
   }
@@ -163515,7 +161325,7 @@ template {
   data {
     template_id: "LC_POKELID_IWATE"
     location_card_settings {
-      location_card: LC_POKELID_IWATE
+      location_card: 165
       image_url: "lc_pokelid_iwate"
     }
   }
@@ -163525,7 +161335,7 @@ template {
   data {
     template_id: "LC_POKELID_KAGAWA"
     location_card_settings {
-      location_card: LC_POKELID_KAGAWA
+      location_card: 195
       image_url: "lc_pokelid_kagawa"
     }
   }
@@ -163535,7 +161345,7 @@ template {
   data {
     template_id: "LC_POKELID_KAGOSHIMA"
     location_card_settings {
-      location_card: LC_POKELID_KAGOSHIMA
+      location_card: 202
       image_url: "lc_pokelid_kagoshima"
     }
   }
@@ -163545,7 +161355,7 @@ template {
   data {
     template_id: "LC_POKELID_KANAGAWA"
     location_card_settings {
-      location_card: LC_POKELID_KANAGAWA
+      location_card: 174
       image_url: "lc_pokelid_kanagawa"
     }
   }
@@ -163555,7 +161365,7 @@ template {
   data {
     template_id: "LC_POKELID_KOCHI"
     location_card_settings {
-      location_card: LC_POKELID_KOCHI
+      location_card: 197
       image_url: "lc_pokelid_kochi"
     }
   }
@@ -163565,7 +161375,7 @@ template {
   data {
     template_id: "LC_POKELID_KYOTO"
     location_card_settings {
-      location_card: LC_POKELID_KYOTO
+      location_card: 185
       image_url: "lc_pokelid_kyoto"
     }
   }
@@ -163575,7 +161385,7 @@ template {
   data {
     template_id: "LC_POKELID_MIE"
     location_card_settings {
-      location_card: LC_POKELID_MIE
+      location_card: 183
       image_url: "lc_pokelid_mie"
     }
   }
@@ -163585,7 +161395,7 @@ template {
   data {
     template_id: "LC_POKELID_MIYAGI"
     location_card_settings {
-      location_card: LC_POKELID_MIYAGI
+      location_card: 166
       image_url: "lc_pokelid_miyagi"
     }
   }
@@ -163595,7 +161405,7 @@ template {
   data {
     template_id: "LC_POKELID_MIYAZAKI"
     location_card_settings {
-      location_card: LC_POKELID_MIYAZAKI
+      location_card: 201
       image_url: "lc_pokelid_miyazaki"
     }
   }
@@ -163605,7 +161415,7 @@ template {
   data {
     template_id: "LC_POKELID_NAGASAKI"
     location_card_settings {
-      location_card: LC_POKELID_NAGASAKI
+      location_card: 200
       image_url: "lc_pokelid_nagasaki"
     }
   }
@@ -163615,7 +161425,7 @@ template {
   data {
     template_id: "LC_POKELID_NARA"
     location_card_settings {
-      location_card: LC_POKELID_NARA
+      location_card: 188
       image_url: "lc_pokelid_nara"
     }
   }
@@ -163625,7 +161435,7 @@ template {
   data {
     template_id: "LC_POKELID_NIIGATA"
     location_card_settings {
-      location_card: LC_POKELID_NIIGATA
+      location_card: 176
       image_url: "lc_pokelid_niigata"
     }
   }
@@ -163635,7 +161445,7 @@ template {
   data {
     template_id: "LC_POKELID_OKAYAMA"
     location_card_settings {
-      location_card: LC_POKELID_OKAYAMA
+      location_card: 192
       image_url: "lc_pokelid_okayama"
     }
   }
@@ -163645,7 +161455,7 @@ template {
   data {
     template_id: "LC_POKELID_OKINAWA"
     location_card_settings {
-      location_card: LC_POKELID_OKINAWA
+      location_card: 203
       image_url: "lc_pokelid_okinawa"
     }
   }
@@ -163655,7 +161465,7 @@ template {
   data {
     template_id: "LC_POKELID_OSAKA"
     location_card_settings {
-      location_card: LC_POKELID_OSAKA
+      location_card: 186
       image_url: "lc_pokelid_osaka"
     }
   }
@@ -163665,7 +161475,7 @@ template {
   data {
     template_id: "LC_POKELID_SAGA"
     location_card_settings {
-      location_card: LC_POKELID_SAGA
+      location_card: 199
       image_url: "lc_pokelid_saga"
     }
   }
@@ -163675,7 +161485,7 @@ template {
   data {
     template_id: "LC_POKELID_SAITAMA"
     location_card_settings {
-      location_card: LC_POKELID_SAITAMA
+      location_card: 171
       image_url: "lc_pokelid_saitama"
     }
   }
@@ -163685,7 +161495,7 @@ template {
   data {
     template_id: "LC_POKELID_SHIGA"
     location_card_settings {
-      location_card: LC_POKELID_SHIGA
+      location_card: 184
       image_url: "lc_pokelid_shiga"
     }
   }
@@ -163695,7 +161505,7 @@ template {
   data {
     template_id: "LC_POKELID_SHIMANE"
     location_card_settings {
-      location_card: LC_POKELID_SHIMANE
+      location_card: 191
       image_url: "lc_pokelid_shimane"
     }
   }
@@ -163705,7 +161515,7 @@ template {
   data {
     template_id: "LC_POKELID_SHIZUOKA"
     location_card_settings {
-      location_card: LC_POKELID_SHIZUOKA
+      location_card: 181
       image_url: "lc_pokelid_shizuoka"
     }
   }
@@ -163715,7 +161525,7 @@ template {
   data {
     template_id: "LC_POKELID_TOCHIGI"
     location_card_settings {
-      location_card: LC_POKELID_TOCHIGI
+      location_card: 170
       image_url: "lc_pokelid_tochigi"
     }
   }
@@ -163725,7 +161535,7 @@ template {
   data {
     template_id: "LC_POKELID_TOKUSHIMA"
     location_card_settings {
-      location_card: LC_POKELID_TOKUSHIMA
+      location_card: 194
       image_url: "lc_pokelid_tokushima"
     }
   }
@@ -163735,7 +161545,7 @@ template {
   data {
     template_id: "LC_POKELID_TOKYO"
     location_card_settings {
-      location_card: LC_POKELID_TOKYO
+      location_card: 173
       image_url: "lc_pokelid_tokyo"
     }
   }
@@ -163745,7 +161555,7 @@ template {
   data {
     template_id: "LC_POKELID_TOTTORI"
     location_card_settings {
-      location_card: LC_POKELID_TOTTORI
+      location_card: 190
       image_url: "lc_pokelid_tottori"
     }
   }
@@ -163755,7 +161565,7 @@ template {
   data {
     template_id: "LC_POKELID_TOYAMA"
     location_card_settings {
-      location_card: LC_POKELID_TOYAMA
+      location_card: 177
       image_url: "lc_pokelid_toyama"
     }
   }
@@ -163765,7 +161575,7 @@ template {
   data {
     template_id: "LC_POKELID_WAKAYAMA"
     location_card_settings {
-      location_card: LC_POKELID_WAKAYAMA
+      location_card: 189
       image_url: "lc_pokelid_wakayama"
     }
   }
@@ -163775,7 +161585,7 @@ template {
   data {
     template_id: "LC_POKELID_YAMAGATA"
     location_card_settings {
-      location_card: LC_POKELID_YAMAGATA
+      location_card: 169
       image_url: "lc_pokelid_yamagata"
     }
   }
@@ -163785,7 +161595,7 @@ template {
   data {
     template_id: "LC_POKELID_YAMAGUCHI"
     location_card_settings {
-      location_card: LC_POKELID_YAMAGUCHI
+      location_card: 193
       image_url: "lc_pokelid_yamaguchi"
     }
   }
@@ -163841,7 +161651,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_9THANNIVERSARY"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_9THANNIVERSARY
+      location_card: 109
       image_url: "sb_9thAnniversary"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_9thAnni"
@@ -163865,7 +161675,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001
+      location_card: 89
       image_url: "sb_GoFest2025_Eternatus"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_eternatus"
@@ -163877,7 +161687,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001
+      location_card: 81
       image_url: "sb_GoFest2025"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_rock_001"
@@ -163889,7 +161699,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002
+      location_card: 82
       image_url: "sb_GoFest2025"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_rock_002"
@@ -163901,7 +161711,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003
+      location_card: 83
       image_url: "sb_GoFest2025"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_rock_003"
@@ -163913,7 +161723,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004
+      location_card: 84
       image_url: "sb_GoFest2025"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_rock_004"
@@ -163925,7 +161735,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005
+      location_card: 85
       image_url: "sb_GoFest2025"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_rock_005"
@@ -163937,7 +161747,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006
+      location_card: 86
       image_url: "sb_GoFest2025"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_rock_006"
@@ -163949,7 +161759,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
+      location_card: 88
       image_url: "sb_GoTour2025_black"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_shield"
@@ -163961,7 +161771,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+      location_card: 91
       image_url: "sb_GoTour2025_black"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_shield_c"
@@ -163973,7 +161783,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
+      location_card: 87
       image_url: "sb_GoTour2025_black"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_sword"
@@ -163985,7 +161795,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+      location_card: 90
       image_url: "sb_GoTour2025_black"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_goFest_2025_sword_c"
@@ -164033,7 +161843,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_GOWA_GLOBAL"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_GOWA_GLOBAL
+      location_card: 156
       image_url: "sb_gowa2025_global"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_gowa"
@@ -164045,7 +161855,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_S18"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_S18
+      location_card: 76
       image_url: "sb_Season18_MightAndMastery"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_MightAndMastery"
@@ -164068,7 +161878,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_SEASON19"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_SEASON19
+      location_card: 108
       image_url: "sb_Season19_DelightfulDays"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_DelightfulDays"
@@ -164080,7 +161890,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2025_SEASON20"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2025_SEASON20
+      location_card: 111
       image_url: "sb_Season20_TalesOfTransformation"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_TalesOfTransformation"
@@ -164092,7 +161902,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_COMMUNITYDAY"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_COMMUNITYDAY
+      location_card: 213
       image_url: "sb_Community_2026"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_CommunityDay_2026"
@@ -164104,7 +161914,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_DIAMOND_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_DIAMOND_001
+      location_card: 220
       image_url: "sb_GoTour2026_diamond"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Diamond"
@@ -164116,7 +161926,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_GOLD_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_GOLD_001
+      location_card: 216
       image_url: "sb_GoTour2026_gold"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Gold"
@@ -164128,7 +161938,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_MEGA_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_MEGA_001
+      location_card: 224
       image_url: "sb_GoTour2026_mega"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Mega"
@@ -164140,7 +161950,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_PEARL_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_PEARL_001
+      location_card: 221
       image_url: "sb_GoTour2026_pearl"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Pearl"
@@ -164152,7 +161962,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_RUBY_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_RUBY_001
+      location_card: 218
       image_url: "sb_GoTour2026_ruby"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Ruby"
@@ -164164,7 +161974,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_SAPPHIRE_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_SAPPHIRE_001
+      location_card: 219
       image_url: "sb_GoTour2026_sapphire"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Sapphire"
@@ -164176,7 +161986,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_SILVER_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_SILVER_001
+      location_card: 217
       image_url: "sb_GoTour2026_silver"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Silver"
@@ -164188,7 +161998,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_X_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_X_001
+      location_card: 222
       image_url: "sb_GoTour2026_x"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_X"
@@ -164200,7 +162010,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_Y_001"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_2026_GLOBAL_Y_001
+      location_card: 223
       image_url: "sb_GoTour2026_y"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_Y"
@@ -164212,7 +162022,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_CON2025"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_CON2025
+      location_card: 144
       image_url: "sb_Concierge2025"
       card_type: SPECIAL_BACKGROUND
     }
@@ -164223,7 +162033,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_01"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_EXTRA_2025_01
+      location_card: 133
       image_url: "sb_FestivalofColors_2026"
       card_type: SPECIAL_BACKGROUND
       vfx_address: "bgfx_holi_2026"
@@ -164235,7 +162045,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_02"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_EXTRA_2025_02
+      location_card: 134
       image_url: "lc_taipeiFlowerFestival_2026"
     }
   }
@@ -164245,7 +162055,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_KR2025_LOTTE_01"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_KR2025_LOTTE_01
+      location_card: 100
       image_url: "lc_LotteGiants"
     }
   }
@@ -164255,7 +162065,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_OBSERVATORY_EXHIBITION_TOUR"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_OBSERVATORY_EXHIBITION_TOUR
+      location_card: 211
       image_url: "sb_ObservatoryExhibitionTour"
       card_type: SPECIAL_BACKGROUND
     }
@@ -164266,7 +162076,7 @@ template {
   data {
     template_id: "LC_SPECIALBACKGROUND_POK2026"
     location_card_settings {
-      location_card: LC_SPECIALBACKGROUND_POK2026
+      location_card: 242
       image_url: "lc_pokopia2026"
       card_type: SPECIAL_BACKGROUND
     }
@@ -174172,16 +171982,6 @@ template {
     avatar_item_display {
       icon_address: "n_hat_mlb-orioles_0_icon"
       display_string_id: "avatar_hat_mlborioles"
-    }
-  }
-}
-template {
-  template_id: "N_DISPLAY_n_hat_mlb-padres_0"
-  data {
-    template_id: "N_DISPLAY_n_hat_mlb-padres_0"
-    avatar_item_display {
-      icon_address: "n_hat_mlb-padres_0_icon"
-      display_string_id: "avatar_hat_mlbpadres"
     }
   }
 }
@@ -190213,6 +188013,10 @@ template {
         raid_level: RAID_LEVEL_5_SHADOW
         battle_music_key: "RocketBossCombatMusic"
       }
+      raid_level_music_overrides {
+        raid_level: RAID_LEVEL_MEGA_5
+        battle_music_key: "GoTour2023Music02"
+      }
       raid_feature_flags {
         use_cached_raid_boss_pokemon: true
       }
@@ -190287,10 +188091,6 @@ template {
         forms: DIALGA_NORMAL
         forms: DIALGA_ORIGIN
         battle_music_key: "GoTour2024Music01"
-      }
-      pokemon_music_overrides {
-        pokemon: RAYQUAZA
-        battle_music_key: "GoTour2023Music02"
       }
       fetch_profile_from_social_enabled: true
       suggested_player_count_toast_settings {
@@ -226499,15 +224299,6 @@ template {
   }
 }
 template {
-  template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
-  data {
-    template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
-    code_gate {
-      is_enabled: true
-    }
-  }
-}
-template {
   template_id: "STATIONED_POKEMON_POWER_BOOST_TABLE_SETTINGS"
   data {
     template_id: "STATIONED_POKEMON_POWER_BOOST_TABLE_SETTINGS"
@@ -243746,15 +241537,6 @@ template {
   template_id: "USE_EXTENDED_SETTINGS_FOR_MAX_SCALE_CODE_GATE"
   data {
     template_id: "USE_EXTENDED_SETTINGS_FOR_MAX_SCALE_CODE_GATE"
-    code_gate {
-      is_enabled: true
-    }
-  }
-}
-template {
-  template_id: "USE_GMT_SKU_DATA_CODE_GATE"
-  data {
-    template_id: "USE_GMT_SKU_DATA_CODE_GATE"
     code_gate {
       is_enabled: true
     }
@@ -397485,9 +395267,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 3
-        shadow_base_capture_rate: 0.2
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 205
@@ -397532,12 +395311,6 @@ template {
       }
       is_transferable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 20000
-        purification_candy_needed: 20
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 7
       ibfc {
       }
@@ -397577,9 +395350,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 3
-        shadow_base_capture_rate: 0.2
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 205
@@ -397625,12 +395395,6 @@ template {
       }
       is_transferable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 20000
-        purification_candy_needed: 20
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 7
       use_iris_flying_placement: true
       ibfc {
@@ -397671,9 +395435,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 3
-        shadow_base_capture_rate: 0.2
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 205
@@ -397719,12 +395480,6 @@ template {
       }
       is_transferable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 20000
-        purification_candy_needed: 20
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 7
       elite_cinematic_move: SANDSEAR_STORM
       ibfc {
@@ -412877,9 +410632,6 @@ template {
         camera_distance: 2.5
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.3
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 127
@@ -412909,7 +410661,6 @@ template {
         evolution: HELIOLISK
         evolution_item_requirement: ITEM_SUN_STONE
         candy_cost: 50
-        candy_cost_purified: 45
       }
       model_scale_v2: 1.0
       third_move {
@@ -412919,12 +410670,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       ibfc {
       }
       bread_tier_group: GROUP_2
@@ -412957,9 +410702,6 @@ template {
         camera_distance: 2.5
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.3
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 127
@@ -412990,7 +410732,6 @@ template {
         evolution_item_requirement: ITEM_SUN_STONE
         candy_cost: 50
         form: HELIOLISK_NORMAL
-        candy_cost_purified: 45
       }
       model_scale_v2: 1.0
       form: HELIOPTILE_NORMAL
@@ -413001,12 +410742,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       ibfc {
       }
       bread_tier_group: GROUP_2
@@ -413042,9 +410777,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.125
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 158
@@ -413088,12 +410820,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       ibfc {
       }
       bread_tier_group: GROUP_2
@@ -413129,9 +410855,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.125
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 158
@@ -413176,12 +410899,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       ibfc {
       }
       bread_tier_group: GROUP_2
@@ -424283,9 +422000,6 @@ template {
         camera_distance: 2.0
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.3
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 116
@@ -424307,7 +422021,6 @@ template {
       evolution_branch {
         evolution: ARAQUANID
         candy_cost: 50
-        candy_cost_purified: 45
       }
       model_scale_v2: 1.2
       buddy_offset_male: 0.0
@@ -424327,12 +422040,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 1
       raid_boss_distance_offset: 3.0
       ibfc {
@@ -424366,9 +422073,6 @@ template {
         camera_distance: 2.0
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.3
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 116
@@ -424391,7 +422095,6 @@ template {
         evolution: ARAQUANID
         candy_cost: 50
         form: ARAQUANID_NORMAL
-        candy_cost_purified: 45
       }
       model_scale_v2: 1.2
       form: DEWPIDER_NORMAL
@@ -424412,12 +422115,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 1
       raid_boss_distance_offset: 3.0
       ibfc {
@@ -424454,9 +422151,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.125
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 169
@@ -424496,12 +422190,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 3
       raid_boss_distance_offset: 8.0
       ibfc {
@@ -424538,9 +422226,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.125
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 169
@@ -424581,12 +422266,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 3
       raid_boss_distance_offset: 8.0
       ibfc {
@@ -424972,9 +422651,6 @@ template {
         camera_distance: 2.0
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.3
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 120
@@ -424994,7 +422670,6 @@ template {
       evolution_branch {
         evolution: SHIINOTIC
         candy_cost: 50
-        candy_cost_purified: 45
       }
       model_scale_v2: 1.1
       buddy_offset_male: 0.0
@@ -425014,12 +422689,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 2
       ibfc {
       }
@@ -425053,9 +422722,6 @@ template {
         camera_distance: 2.0
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.3
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 120
@@ -425076,7 +422742,6 @@ template {
         evolution: SHIINOTIC
         candy_cost: 50
         form: SHIINOTIC_NORMAL
-        candy_cost_purified: 45
       }
       model_scale_v2: 1.1
       form: MORELULL_NORMAL
@@ -425097,12 +422762,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 2
       ibfc {
       }
@@ -425137,9 +422796,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.125
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 155
@@ -425176,12 +422832,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 2
       raid_boss_distance_offset: 3.0
       ibfc {
@@ -425217,9 +422867,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.125
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 155
@@ -425257,12 +422904,6 @@ template {
       is_transferable: true
       is_deployable: true
       is_tradable: true
-      shadow {
-        purification_stardust_needed: 3000
-        purification_candy_needed: 3
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 2
       raid_boss_distance_offset: 3.0
       ibfc {
@@ -425610,9 +423251,6 @@ template {
         camera_distance: 4.0
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.7
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 172
@@ -425634,7 +423272,6 @@ template {
       evolution_branch {
         evolution: BEWEAR
         candy_cost: 400
-        candy_cost_purified: 360
       }
       model_scale_v2: 1.0
       buddy_offset_male: 0.0
@@ -425669,12 +423306,6 @@ template {
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
-      shadow {
-        purification_stardust_needed: 1000
-        purification_candy_needed: 1
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 2
       ibfc {
       }
@@ -425706,9 +423337,6 @@ template {
         camera_distance: 4.0
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
-        shadow_base_capture_rate: 0.7
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 172
@@ -425731,7 +423359,6 @@ template {
         evolution: BEWEAR
         candy_cost: 400
         form: BEWEAR_NORMAL
-        candy_cost_purified: 360
       }
       model_scale_v2: 1.0
       form: STUFFUL_NORMAL
@@ -425767,12 +423394,6 @@ template {
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
-      shadow {
-        purification_stardust_needed: 1000
-        purification_candy_needed: 1
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 2
       ibfc {
       }
@@ -425808,9 +423429,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.1
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 260
@@ -425865,12 +423483,6 @@ template {
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
-      shadow {
-        purification_stardust_needed: 1000
-        purification_candy_needed: 1
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 3
       elite_cinematic_move: DRAIN_PUNCH
       ibfc {
@@ -425907,9 +423519,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.1
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 260
@@ -425965,12 +423574,6 @@ template {
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
-      shadow {
-        purification_stardust_needed: 1000
-        purification_candy_needed: 1
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 3
       elite_cinematic_move: DRAIN_PUNCH
       ibfc {
@@ -426007,9 +423610,6 @@ template {
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
         bonus_xl_candy_capture_reward: 1
-        shadow_base_capture_rate: 0.1
-        shadow_attack_probability: 0.7
-        shadow_dodge_probability: 0.2
       }
       stats {
         base_stamina: 260
@@ -426065,12 +423665,6 @@ template {
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
       combat_player_pokemon_position_offset: 0.0
-      shadow {
-        purification_stardust_needed: 1000
-        purification_candy_needed: 1
-        purified_charge_move: RETURN
-        shadow_charge_move: FRUSTRATION
-      }
       buddy_group_number: 3
       elite_cinematic_move: DRAIN_PUNCH
       ibfc {
@@ -447565,8 +445159,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+          existing_location_card: 87
+          replacement_location_card: 90
         }
       }
       form_change {
@@ -447594,8 +445188,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+          existing_location_card: 87
+          replacement_location_card: 90
         }
       }
       ibfc {
@@ -447683,8 +445277,8 @@ template {
           clear_bread_mode: true
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
+          existing_location_card: 90
+          replacement_location_card: 87
         }
       }
       ibfc {
@@ -447784,8 +445378,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+          existing_location_card: 87
+          replacement_location_card: 90
         }
       }
       form_change {
@@ -447813,8 +445407,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+          existing_location_card: 87
+          replacement_location_card: 90
         }
       }
       ibfc {
@@ -447924,8 +445518,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+          existing_location_card: 88
+          replacement_location_card: 91
         }
       }
       form_change {
@@ -447953,8 +445547,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+          existing_location_card: 88
+          replacement_location_card: 91
         }
       }
       ibfc {
@@ -448042,8 +445636,8 @@ template {
           clear_bread_mode: true
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
+          existing_location_card: 91
+          replacement_location_card: 88
         }
       }
       ibfc {
@@ -448143,8 +445737,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+          existing_location_card: 88
+          replacement_location_card: 91
         }
       }
       form_change {
@@ -448172,8 +445766,8 @@ template {
           }
         }
         location_card_settings {
-          existing_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
-          replacement_location_card: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+          existing_location_card: 88
+          replacement_location_card: 91
         }
       }
       ibfc {
@@ -458466,7 +456060,6 @@ template {
       is_deployable: true
       is_tradable: true
       buddy_group_number: 1
-      elite_cinematic_move: GIGATON_HAMMER
       ibfc {
       }
       bread_tier_group: GROUP_3
@@ -458534,7 +456127,6 @@ template {
       is_deployable: true
       is_tradable: true
       buddy_group_number: 1
-      elite_cinematic_move: GIGATON_HAMMER
       ibfc {
       }
       bread_tier_group: GROUP_3
@@ -459641,18 +457233,12 @@ template {
       pokemon_id: ORTHWORM
       type: POKEMON_TYPE_STEEL
       camera {
-        cylinder_radius_m: 1.28
-        cylinder_height_m: 1.09
       }
       encounter {
-        collision_radius_m: 0.24
-        collision_height_m: 0.26
-        collision_head_radius_m: 0.28
         jump_time_s: 1.0
         attack_probability: 0.1
         dodge_probability: 0.15
         dodge_duration_s: 1.0
-        camera_distance: 4.6
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
       }
@@ -459672,43 +457258,13 @@ template {
       weight_std_dev: 38.75
       family_id: FAMILY_ORTHWORM
       km_buddy_distance: 5.0
-      model_height: 2.31
-      model_scale_v2: 1.28
-      buddy_offset_male: 0.0
-      buddy_offset_male: 0.0
-      buddy_offset_male: 0.0
-      buddy_offset_female: 0.0
-      buddy_offset_female: 0.0
-      buddy_offset_female: 0.0
-      buddy_scale: 15.0
-      buddy_portrait_offset: -50.0
-      buddy_portrait_offset: 100.0
-      buddy_portrait_offset: -560.0
       third_move {
         stardust_to_unlock: 75000
         candy_to_unlock: 75
       }
       is_transferable: true
       is_deployable: true
-      combat_shoulder_camera_angle: 0.0
-      combat_shoulder_camera_angle: 0.0
-      combat_shoulder_camera_angle: 0.0
       is_tradable: true
-      combat_default_camera_angle: 0.0
-      combat_default_camera_angle: 0.0
-      combat_default_camera_angle: 0.0
-      combat_opponent_focus_camera_angle: 0.0
-      combat_opponent_focus_camera_angle: 0.0
-      combat_opponent_focus_camera_angle: 0.0
-      combat_player_focus_camera_angle: 0.0
-      combat_player_focus_camera_angle: 0.0
-      combat_player_focus_camera_angle: 0.0
-      combat_player_pokemon_position_offset: 0.0
-      combat_player_pokemon_position_offset: 0.0
-      combat_player_pokemon_position_offset: 0.0
-      buddy_portrait_rotation: 0.0
-      buddy_portrait_rotation: 0.0
-      buddy_portrait_rotation: 0.0
       ibfc {
       }
       bread_tier_group: GROUP_3
@@ -459723,18 +457279,12 @@ template {
       pokemon_id: ORTHWORM
       type: POKEMON_TYPE_STEEL
       camera {
-        cylinder_radius_m: 1.28
-        cylinder_height_m: 1.09
       }
       encounter {
-        collision_radius_m: 0.24
-        collision_height_m: 0.26
-        collision_head_radius_m: 0.28
         jump_time_s: 1.0
         attack_probability: 0.1
         dodge_probability: 0.15
         dodge_duration_s: 1.0
-        camera_distance: 4.6
         min_pokemon_action_frequency_s: 0.2
         max_pokemon_action_frequency_s: 1.6
       }
@@ -459754,44 +457304,14 @@ template {
       weight_std_dev: 38.75
       family_id: FAMILY_ORTHWORM
       km_buddy_distance: 5.0
-      model_height: 2.31
-      model_scale_v2: 1.28
       form: ORTHWORM_NORMAL
-      buddy_offset_male: 0.0
-      buddy_offset_male: 0.0
-      buddy_offset_male: 0.0
-      buddy_offset_female: 0.0
-      buddy_offset_female: 0.0
-      buddy_offset_female: 0.0
-      buddy_scale: 15.0
-      buddy_portrait_offset: -50.0
-      buddy_portrait_offset: 100.0
-      buddy_portrait_offset: -560.0
       third_move {
         stardust_to_unlock: 75000
         candy_to_unlock: 75
       }
       is_transferable: true
       is_deployable: true
-      combat_shoulder_camera_angle: 0.0
-      combat_shoulder_camera_angle: 0.0
-      combat_shoulder_camera_angle: 0.0
       is_tradable: true
-      combat_default_camera_angle: 0.0
-      combat_default_camera_angle: 0.0
-      combat_default_camera_angle: 0.0
-      combat_opponent_focus_camera_angle: 0.0
-      combat_opponent_focus_camera_angle: 0.0
-      combat_opponent_focus_camera_angle: 0.0
-      combat_player_focus_camera_angle: 0.0
-      combat_player_focus_camera_angle: 0.0
-      combat_player_focus_camera_angle: 0.0
-      combat_player_pokemon_position_offset: 0.0
-      combat_player_pokemon_position_offset: 0.0
-      combat_player_pokemon_position_offset: 0.0
-      buddy_portrait_rotation: 0.0
-      buddy_portrait_rotation: 0.0
-      buddy_portrait_rotation: 0.0
       ibfc {
       }
       bread_tier_group: GROUP_3
@@ -460416,7 +457936,6 @@ template {
       ibfc {
       }
       bread_tier_group: GROUP_3
-      disable_transfer_to_pokemon_home_if_shiny: true
     }
   }
 }
@@ -460479,7 +457998,6 @@ template {
       ibfc {
       }
       bread_tier_group: GROUP_3
-      disable_transfer_to_pokemon_home_if_shiny: true
     }
   }
 }
@@ -468174,8 +465692,8 @@ template {
   data {
     template_id: "VS_SEEKER_CLIENT_SETTINGS"
     vs_seeker_client_settings {
-      allowed_vs_seeker_league_template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
-      allowed_vs_seeker_league_template_id: "COMBAT_LEAGUE_VS_SEEKER_SPRING_GREAT"
+      allowed_vs_seeker_league_template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+      allowed_vs_seeker_league_template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
     }
   }
 }
@@ -468188,31 +465706,31 @@ template {
       reward {
         item {
           stardust: true
-          count: 3000
+          count: 750
         }
       }
       reward {
         item {
           stardust: true
-          count: 3000
+          count: 750
         }
       }
       reward {
         item {
           stardust: true
-          count: 3000
+          count: 750
         }
       }
       reward {
         item {
           stardust: true
-          count: 3000
+          count: 750
         }
       }
       reward {
         item {
           stardust: true
-          count: 3000
+          count: 750
         }
       }
     }
@@ -468227,31 +465745,31 @@ template {
       reward {
         item {
           stardust: true
-          count: 6000
+          count: 1500
         }
       }
       reward {
         item {
           stardust: true
-          count: 6000
+          count: 1500
         }
       }
       reward {
         item {
           stardust: true
-          count: 6000
+          count: 1500
         }
       }
       reward {
         item {
           stardust: true
-          count: 6000
+          count: 1500
         }
       }
       reward {
         item {
           stardust: true
-          count: 6000
+          count: 1500
         }
       }
       reward_track: PREMIUM
@@ -468267,7 +465785,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2120
+          count: 530
         }
       }
       reward {
@@ -468285,7 +465803,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4240
+          count: 1060
         }
       }
     }
@@ -468300,7 +465818,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4240
+          count: 1060
         }
       }
       reward {
@@ -468318,7 +465836,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 8480
+          count: 2120
         }
       }
       reward_track: PREMIUM
@@ -468334,7 +465852,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2120
+          count: 530
         }
       }
       reward {
@@ -468352,7 +465870,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4240
+          count: 1060
         }
       }
     }
@@ -468367,7 +465885,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4240
+          count: 1060
         }
       }
       reward {
@@ -468385,7 +465903,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 8480
+          count: 2120
         }
       }
       reward_track: PREMIUM
@@ -468401,7 +465919,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2280
+          count: 570
         }
       }
       reward {
@@ -468419,7 +465937,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4560
+          count: 1140
         }
       }
     }
@@ -468434,7 +465952,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4560
+          count: 1140
         }
       }
       reward {
@@ -468452,7 +465970,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 9120
+          count: 2280
         }
       }
       reward_track: PREMIUM
@@ -468468,7 +465986,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2400
+          count: 600
         }
       }
       reward {
@@ -468486,7 +466004,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4800
+          count: 1200
         }
       }
     }
@@ -468501,7 +466019,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4800
+          count: 1200
         }
       }
       reward {
@@ -468519,7 +466037,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 9600
+          count: 2400
         }
       }
       reward_track: PREMIUM
@@ -468614,7 +466132,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2800
+          count: 700
         }
       }
       reward {
@@ -468632,7 +466150,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 5600
+          count: 1400
         }
       }
     }
@@ -468647,7 +466165,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 5600
+          count: 1400
         }
       }
       reward {
@@ -468665,7 +466183,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 11200
+          count: 2800
         }
       }
       reward_track: PREMIUM
@@ -468681,7 +466199,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2920
+          count: 730
         }
       }
       reward {
@@ -468699,7 +466217,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 5840
+          count: 1460
         }
       }
     }
@@ -468714,7 +466232,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 5840
+          count: 1460
         }
       }
       reward {
@@ -468732,7 +466250,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 11680
+          count: 2920
         }
       }
       reward_track: PREMIUM
@@ -468748,7 +466266,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3080
+          count: 770
         }
       }
       reward {
@@ -468766,7 +466284,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 6160
+          count: 1540
         }
       }
     }
@@ -468781,7 +466299,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 6160
+          count: 1540
         }
       }
       reward {
@@ -468799,7 +466317,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 12320
+          count: 3080
         }
       }
       reward_track: PREMIUM
@@ -468864,7 +466382,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1200
+          count: 300
         }
       }
       reward {
@@ -468882,7 +466400,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2400
+          count: 600
         }
       }
     }
@@ -468897,7 +466415,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2400
+          count: 600
         }
       }
       reward {
@@ -468915,7 +466433,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 4800
+          count: 1200
         }
       }
       reward_track: PREMIUM
@@ -468931,7 +466449,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3480
+          count: 870
         }
       }
       reward {
@@ -468949,7 +466467,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 6960
+          count: 1740
         }
       }
     }
@@ -468964,7 +466482,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 6960
+          count: 1740
         }
       }
       reward {
@@ -468982,7 +466500,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 13920
+          count: 3480
         }
       }
       reward_track: PREMIUM
@@ -468998,7 +466516,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 900
         }
       }
       reward {
@@ -469016,7 +466534,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
     }
@@ -469031,7 +466549,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
       reward {
@@ -469049,7 +466567,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 14400
+          count: 3600
         }
       }
       reward_track: PREMIUM
@@ -469065,7 +466583,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 900
         }
       }
       reward {
@@ -469083,7 +466601,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
     }
@@ -469098,7 +466616,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
       reward {
@@ -469116,7 +466634,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 14400
+          count: 3600
         }
       }
       reward_track: PREMIUM
@@ -469132,7 +466650,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 900
         }
       }
       reward {
@@ -469150,7 +466668,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
     }
@@ -469165,7 +466683,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
       reward {
@@ -469183,7 +466701,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 14400
+          count: 3600
         }
       }
       reward_track: PREMIUM
@@ -469199,7 +466717,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 900
         }
       }
       reward {
@@ -469217,7 +466735,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
     }
@@ -469232,7 +466750,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7200
+          count: 1800
         }
       }
       reward {
@@ -469250,7 +466768,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 14400
+          count: 3600
         }
       }
       reward_track: PREMIUM
@@ -469266,7 +466784,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1320
+          count: 330
         }
       }
       reward {
@@ -469284,7 +466802,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2640
+          count: 660
         }
       }
     }
@@ -469299,7 +466817,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2640
+          count: 660
         }
       }
       reward {
@@ -469317,7 +466835,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 5280
+          count: 1320
         }
       }
       reward_track: PREMIUM
@@ -469333,7 +466851,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1320
+          count: 330
         }
       }
       reward {
@@ -469351,7 +466869,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2640
+          count: 660
         }
       }
     }
@@ -469366,7 +466884,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2640
+          count: 660
         }
       }
       reward {
@@ -469384,7 +466902,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 5280
+          count: 1320
         }
       }
       reward_track: PREMIUM
@@ -469400,7 +466918,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1480
+          count: 370
         }
       }
       reward {
@@ -469418,7 +466936,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2960
+          count: 740
         }
       }
     }
@@ -469433,7 +466951,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2960
+          count: 740
         }
       }
       reward {
@@ -469451,7 +466969,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 5920
+          count: 1480
         }
       }
       reward_track: PREMIUM
@@ -469516,7 +467034,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1600
+          count: 400
         }
       }
       reward {
@@ -469534,7 +467052,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3200
+          count: 800
         }
       }
     }
@@ -469549,7 +467067,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3200
+          count: 800
         }
       }
       reward {
@@ -469567,7 +467085,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 6400
+          count: 1600
         }
       }
       reward_track: PREMIUM
@@ -469583,7 +467101,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1720
+          count: 430
         }
       }
       reward {
@@ -469601,7 +467119,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3440
+          count: 860
         }
       }
     }
@@ -469616,7 +467134,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3440
+          count: 860
         }
       }
       reward {
@@ -469634,7 +467152,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 6880
+          count: 1720
         }
       }
       reward_track: PREMIUM
@@ -469650,7 +467168,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1720
+          count: 430
         }
       }
       reward {
@@ -469668,7 +467186,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3440
+          count: 860
         }
       }
     }
@@ -469683,7 +467201,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3440
+          count: 860
         }
       }
       reward {
@@ -469701,7 +467219,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 6880
+          count: 1720
         }
       }
       reward_track: PREMIUM
@@ -469717,7 +467235,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1880
+          count: 470
         }
       }
       reward {
@@ -469735,7 +467253,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3760
+          count: 940
         }
       }
     }
@@ -469750,7 +467268,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3760
+          count: 940
         }
       }
       reward {
@@ -469768,7 +467286,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 7520
+          count: 1880
         }
       }
       reward_track: PREMIUM
@@ -470428,9 +467946,9 @@ template {
       }
       available_pokemon {
         pokemon {
-          pokemon_id: GROUDON
+          pokemon_id: KYOGRE
           pokemon_display {
-            form: GROUDON_NORMAL
+            form: KYOGRE_NORMAL
           }
         }
         unlockedAtRank: 20
@@ -471109,9 +468627,9 @@ template {
       }
       available_pokemon {
         pokemon {
-          pokemon_id: GROUDON
+          pokemon_id: KYOGRE
           pokemon_display {
-            form: GROUDON_NORMAL
+            form: KYOGRE_NORMAL
           }
         }
         unlockedAtRank: 20
@@ -473474,15 +470992,9 @@ template {
       sku: "bundle.hatchbox2024.1"
       category: IAP_CATEGORY_BUNDLE
       sort_order: 1
+      hidden: true
       sprite_id: "bundle.general.adventure.1"
       title: "bundle.xmas.large.1_title"
-      sku_enable_time: "2022-10-13T12:00:00"
-      sku_disable_time: "2026-04-20T20:00:00"
-      sku_enable_time_utc_ms: 1665662400000
-      sku_disable_time_utc_ms: 1776715200000
-      show_discount_tag: true
-      show_strikethrough_price: true
-      total_value: 1910
     }
   }
 }
@@ -475352,6 +472864,7 @@ template {
       sku: "general1.ticket.4"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 1
+      hidden: true
       sprite_id: "general1.ticket.4"
       title: "general1.ticket.4_Riolu0426_title"
       sku_enable_time: "2023-01-01T11:00:01"
@@ -475372,6 +472885,7 @@ template {
       sku: "general1.ticket.4.giftable"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 1
+      hidden: true
       sprite_id: "general1.ticket.4"
       title: "general1.ticket.4_Riolu0426_title"
       sku_enable_time: "2023-01-01T11:00:01"
@@ -475570,7 +473084,6 @@ template {
       sku: "general2.ticket.3"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 2
-      hidden: true
       sprite_id: "general1.ticket.2"
       title: "general1.ticket_CD_Tinkatink26_title"
       sku_enable_time: "2019-03-14T08:00:00"
@@ -475591,7 +473104,6 @@ template {
       sku: "general2.ticket.3.giftable"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 2
-      hidden: true
       sprite_id: "general1.ticket.2"
       title: "general1.ticket_CD_Tinkatink26_title"
       sku_enable_time: "2019-03-14T08:00:00"
@@ -476149,48 +473661,14 @@ template {
     template_id: "pgorelease.april2_2026_deluxe_event_pass_track_redirect"
     iap_item_display {
       sku: "pgorelease.april2_2026_deluxe_event_pass_track_redirect"
-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 1
+      hidden: true
       title: "season_pass_premium_track_title_sustainabilityweek2026"
       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
       sku_enable_time: "2025-04-14T10:00:00"
-      sku_disable_time: "2026-04-22T20:00:00"
+      sku_disable_time: "2025-04-22T20:00:00"
       sku_enable_time_utc_ms: 1744624800000
-      sku_disable_time_utc_ms: 1776888000000
-      image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
-    }
-  }
-}
-template {
-  template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-  data {
-    template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-    iap_item_display {
-      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-      sort_order: 1
-      title: "season_pass_premium_track_title_sustainabilityweek2026"
-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-      sku_enable_time: "2025-04-14T10:00:00"
-      sku_disable_time: "2026-04-22T20:00:00"
-      sku_enable_time_utc_ms: 1744624800000
-      sku_disable_time_utc_ms: 1776888000000
-      image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
-    }
-  }
-}
-template {
-  template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-  data {
-    template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-    iap_item_display {
-      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-      sort_order: 1
-      title: "season_pass_premium_track_plus_six_ranks_title_sustainabilityweek2026"
-      description: "event_pass_plus_points_6_ranks_description"
-      sku_enable_time: "2025-04-14T10:00:00"
-      sku_disable_time: "2026-04-22T20:00:00"
-      sku_enable_time_utc_ms: 1744624800000
-      sku_disable_time_utc_ms: 1776888000000
+      sku_disable_time_utc_ms: 1745352000000
       image_url: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
     }
   }
@@ -477237,6 +474715,7 @@ template {
       sku: "pgorelease.general1.ticket.4"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 1
+      hidden: true
       sprite_id: "general1.ticket.4"
       title: "general1.ticket.4_Riolu0426_title"
       sku_enable_time: "2023-01-01T11:00:03"
@@ -477257,6 +474736,7 @@ template {
       sku: "pgorelease.general1.ticket.4.giftable"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 1
+      hidden: true
       sprite_id: "general1.ticket.4"
       title: "general1.ticket.4_Riolu0426_title"
       sku_enable_time: "2023-01-01T11:00:03"
@@ -477436,7 +474916,6 @@ template {
       sku: "pgorelease.general2.ticket.3"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 2
-      hidden: true
       sprite_id: "general1.ticket.2"
       title: "general1.ticket_CD_Tinkatink26_title"
       sku_enable_time: "2019-03-14T08:00:00"
@@ -477457,7 +474936,6 @@ template {
       sku: "pgorelease.general2.ticket.3.giftable"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sort_order: 2
-      hidden: true
       sprite_id: "general1.ticket.2"
       title: "general1.ticket_CD_Tinkatink26_title"
       sku_enable_time: "2019-03-14T08:00:00"
@@ -483059,10 +480537,10 @@ template {
     }
   }
 }
-batch_id: 1776386930700
+batch_id: 1775775593637
 experiment_id: 100
 experiment_id: 170
-experiment_id: 178
+experiment_id: 177
 experiment_id: 300
 experiment_id: 320
 experiment_id: 351
@@ -483075,27 +480553,20 @@ experiment_id: 514
 experiment_id: 602
 experiment_id: 805
 experiment_id: 807
-experiment_id: 1206
 experiment_id: 1699
 experiment_id: 1816
-experiment_id: 2254
 experiment_id: 2297
 experiment_id: 2600
 experiment_id: 2650
 experiment_id: 3032
 experiment_id: 3063
 experiment_id: 3105
-experiment_id: 3114
+experiment_id: 3113
 experiment_id: 3124
 experiment_id: 3126
-experiment_id: 3134
-experiment_id: 3161
+experiment_id: 3133
+experiment_id: 3160
 experiment_id: 3195
-experiment_id: 3913
-experiment_id: 3915
-experiment_id: 3916
-experiment_id: 3920
-experiment_id: 3925
 experiment_id: 4998
 experiment_id: 5160
 experiment_id: 5162
@@ -483103,9 +480574,10 @@ experiment_id: 5163
 experiment_id: 5506
 experiment_id: 5508
 experiment_id: 6075
+experiment_id: 7019
 experiment_id: 7020
 experiment_id: 7023
-experiment_id: 8667
+experiment_id: 8666
 experiment_id: 9521
 experiment_id: 9552
 experiment_id: 9553
